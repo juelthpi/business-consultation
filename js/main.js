@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         breakpoints: {
             640: { slidesPerView: 1 },
-            1024: { slidesPerView: 2 },
+            768: { slidesPerView: 2 },
             1280: { slidesPerView: 3 },
         }
     });
@@ -261,4 +261,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize with first category
     if (subtabsContainer) renderSubtabs('market');
+
+    // 8. Scroll to Top Button
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    if (scrollToTopBtn) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        // Scroll to top on click
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
