@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Consultants | Leading Global Solutions</title>
+    <meta name="description"
+        content="Expert business consultancy services to help your brand grow and succeed in the global market.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Local Tailwind v4 Compiled CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2">
+        <div class="w-full  mx-auto px-4 md:px-6">
+            <nav
+                class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-slate-200/50 px-6 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 bg-brand rounded-xl flex items-center justify-center text-white text-xl group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-2xl font-heading font-bold tracking-tight text-slate-800">
+                        DU<span class="text-brand">VOLKS</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                    <li><a href="index.html" class="text-brand font-bold">Home</a></li>
+                    <li><a href="about.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">About</a></li>
+                    <li><a href="services.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Services</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="flex items-center gap-4">
+                    <a href="contact.html"
+                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95 hover:shadow-brand/40">
+                        Get Started
+                    </a>
+                    <button id="mobileMenuBtn"
+                        class="lg:hidden w-10 h-10 flex items-center justify-center text-slate-700 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Off-canvas -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
+        <!-- Backdrop -->
+        <div id="mobileMenuBackdrop"
+            class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+
+        <!-- Menu Content -->
+        <div id="mobileMenuContent"
+            class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
+            <div class="flex items-center justify-between mb-12">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-sm">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-800">DU<span
+                            class="text-brand">VOLKS</span></span>
+                </a>
+                <button id="closeMenuBtn"
+                    class="w-10 h-10 flex items-center justify-center text-slate-500 text-xl hover:text-brand transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <nav class="flex-grow">
+                <ul class="space-y-6">
+                    <li><a href="index.html" class="text-base font-bold text-brand block">Home</a></li>
+                    <li><a href="about.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">About</a>
+                    </li>
+                    <li><a href="services.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Services</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mt-auto pt-10 border-t border-slate-100">
+                <a href="contact.html"
+                    class="w-full bg-brand text-white py-3 rounded-2xl font-bold text-center block shadow-lg shadow-brand/20 active:scale-95 text-base">
+                    Get Started
+                </a>
+                <div class="flex items-center justify-center gap-6 mt-8">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- <div class="fixed top-[10%] left-0 right-0 mx-auto -z-10 opacity-5">
+            <img src="assets/images/bg/bg-1.webp" alt="img" class="w-full h-full object-cover">
+        </div> -->
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 overflow-hidden min-h-[90vh] flex items-center">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-brand/5 -skew-x-12 translate-x-1/4 -z-10 animate-pulse">
+            </div>
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="animate-fade-in-up">
+                        <span
+                            class="inline-flex items-center gap-2 bg-brand/10 text-brand px-4 py-2 rounded-full text-xs font-bold mb-6 tracking-widest uppercase">
+                            <span class="w-2 h-2 bg-brand rounded-full animate-ping"></span>
+                            Trusted Partners Worldwide
+                        </span>
+                        <h1 class="text-4xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.05] mb-4">
+                            Transforming <span class="text-brand relative">Ideas<span
+                                    class="absolute bottom-2 left-0 w-full h-3 bg-brand/10 -z-10"></span></span> into
+                            Reality
+                        </h1>
+                        <p class="text-lg text-slate-600 mb-10 max-w-xl leading-relaxed">
+                            We provide world-class consultancy services to help your brand navigate complex markets and
+                            achieve sustainable growth.
+                        </p>
+                        <div class="flex flex-wrap gap-5">
+                            <a href="contact.html"
+                                class="bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-brand/25 active:scale-95 hover:-translate-y-1">
+                                Launch Your Project
+                            </a>
+                            <a href="services.html"
+                                class="bg-white hover:bg-slate-50 text-slate-800 px-8 py-4 rounded-2xl font-bold text-lg transition-all border border-slate-200 active:scale-95 flex items-center gap-3">
+                                <i class="fa-solid fa-play text-brand text-sm"></i> How it Works
+                            </a>
+                        </div>
+
+                        <div class="mt-14 pt-8 border-t border-slate-200 flex items-center gap-8">
+                            <div class="flex -space-x-4">
+                                <img src="./assets/images/clients/client-1.jpg"
+                                    class="w-14 h-14 rounded-full border-4 border-white shadow-sm hover:scale-110 transition-transform cursor-pointer"
+                                    alt="Client">
+                                <img src="./assets/images/clients/client-2.jpg"
+                                    class="w-14 h-14 rounded-full border-4 border-white shadow-sm hover:scale-110 transition-transform cursor-pointer"
+                                    alt="Client">
+                                <img src="./assets/images/clients/client-3.jpg"
+                                    class="w-14 h-14 rounded-full border-4 border-white shadow-sm hover:scale-110 transition-transform cursor-pointer"
+                                    alt="Client">
+                                <div
+                                    class="w-14 h-14 rounded-full border-4 border-white bg-slate-900 text-white flex items-center justify-center text-xs font-bold shadow-sm">
+                                    5k+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex gap-1 text-yellow-400 mb-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-slate-900 font-bold">Trusted by 2,500+ global brands</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative lg:block hidden">
+                        <!-- Swiper Hero -->
+                        <div class="swiper heroSwiper rounded-[3rem] overflow-hidden shadow-2xl relative">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide h-[650px] relative">
+                                    <img src="./assets/images/hero/hero-1.png"
+                                        class="w-full h-full object-cover scale-110 animate-slow-zoom" alt="Strategy">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-[650px] relative">
+                                    <img src="./assets/images/hero/hero-2.png" class="w-full h-full object-cover"
+                                        alt="Team">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination !bottom-10"></div>
+                        </div>
+
+                        <!-- Premium Cards -->
+                        <div
+                            class="absolute -bottom-8 -right-8 bg-white p-8 rounded-3xl shadow-2xl border border-slate-100 animate-float z-30">
+                            <div class="flex items-center gap-5">
+                                <div
+                                    class="w-14 h-14 bg-brand/10 text-brand rounded-2xl flex items-center justify-center text-2xl">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+                                <div>
+                                    <p class="text-slate-500 text-sm font-medium">Monthly Progress</p>
+                                    <p
+                                        class="text-3xl font-bold bg-gradient-to-r from-brand to-emerald-500 bg-clip-text text-transparent">
+                                        +340%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute top-10 -left-10 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50 animate-float [animation-delay:-1.5s] z-30">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p class="font-bold text-slate-800 pr-4">Quality Guaranteed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-slate-100 relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-brand/5 blur-[120px] rounded-full pointer-events-none -z-10">
+            </div>
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-20">
+                    <div class="max-w-2xl">
+                        <span
+                            class="text-brand font-bold tracking-[0.2em] uppercase text-sm mb-4 inline-block">Professional
+                            Expertise</span>
+                        <h2 class="text-2xl md:text-4xl font-heading font-bold text-slate-900 leading-tight">Solutions
+                            That <span class="bg-brand text-white px-4 py-1 rounded-2xl">Power</span> Your Success</h2>
+                    </div>
+                    <a href="services.html"
+                        class="mt-8 md:mt-0 inline-flex items-center gap-3 font-bold text-brand hover:gap-5 transition-all">
+                        View All Services <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Service 1 -->
+                    <div
+                        class="group relative p-8 rounded-2xl bg-white border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)] overflow-hidden">
+                        <!-- Card Decorative Shapes -->
+                        <div class="absolute inset-0 bg-grid-slate opacity-[0.3] -z-0"></div>
+                        <div
+                            class="shape-blob bg-brand w-40 h-40 -bottom-12 -right-12 group-hover:scale-150 transition-transform duration-700">
+                        </div>
+                        <div
+                            class="shape-blob bg-blue-400 w-32 h-32 -top-12 -left-12 group-hover:opacity-20 transition-all">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div
+                                class="w-18 h-18 bg-brand/10 text-brand rounded-2xl flex items-center justify-center text-4xl mb-4 group-hover:bg-brand group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500 shadow-sm">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-slate-900">Business Setup
+                            </h3>
+                            <p class="text-slate-500 mb-4 leading-relaxed text-lg">We simplify the process of setting up
+                                businesses in Saudi Arabia, ensuring compliance and success.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-300 font-black text-4xl opacity-50">01</span>
+                                <a href="services.html"
+                                    class="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:shadow-lg group-hover:shadow-brand/30 transition-all duration-500">
+                                    <i
+                                        class="fa-solid fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="group relative p-8 rounded-2xl bg-white border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)] overflow-hidden">
+                        <!-- Card Decorative Shapes -->
+                        <div class="absolute inset-0 bg-grid-slate opacity-[0.3] -z-0"></div>
+                        <div
+                            class="shape-blob bg-brand w-40 h-40 -bottom-12 -right-12 group-hover:scale-150 transition-transform duration-700">
+                        </div>
+                        <div
+                            class="shape-blob bg-brand w-32 h-32 -top-12 -left-12 group-hover:opacity-20 transition-all">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div
+                                class="w-18 h-18 bg-brand/10 text-brand rounded-2xl flex items-center justify-center text-4xl mb-4 group-hover:bg-brand group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500 shadow-sm">
+                                <i class="fa-solid fa-id-card-clip"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-6 text-slate-900">PRO/GRO Services</h3>
+                            <p class="text-slate-500 mb-4 leading-relaxed text-lg">DuVolks provides tailored regulatory
+                                compliance solutions, ensuring businesses meet requirements, mitigate risks, and stay
+                                adaptable.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-300 font-black text-4xl opacity-50">02</span>
+                                <a href="services.html"
+                                    class="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:shadow-lg group-hover:shadow-brand/30 transition-all duration-500">
+                                    <i
+                                        class="fa-solid fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div
+                        class="group relative p-8 rounded-2xl bg-white border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)] overflow-hidden">
+                        <!-- Card Decorative Shapes -->
+                        <div class="absolute inset-0 bg-grid-slate opacity-[0.3] -z-0"></div>
+                        <div
+                            class="shape-blob bg-brand w-40 h-40 -bottom-12 -right-12 group-hover:scale-150 transition-transform duration-700">
+                        </div>
+                        <div
+                            class="shape-blob bg-brand w-32 h-32 -top-12 -left-12 group-hover:opacity-20 transition-all">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div
+                                class="w-18 h-18 bg-brand/10 text-brand rounded-2xl flex items-center justify-center text-4xl mb-4 group-hover:bg-brand group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500 shadow-sm">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-6 text-slate-900">IP Services</h3>
+                            <p class="text-slate-500 mb-4 leading-relaxed text-lg">IP services safeguard patents,
+                                trademarks, copyrights, and trade secrets, helping businesses secure valuable assets..
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-300 font-black text-4xl opacity-50">03</span>
+                                <a href="services.html"
+                                    class="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:shadow-lg group-hover:shadow-brand/30 transition-all duration-500">
+                                    <i
+                                        class="fa-solid fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                    <div
+                        class="group relative p-8 rounded-2xl bg-white border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)] overflow-hidden">
+                        <!-- Card Decorative Shapes -->
+                        <div class="absolute inset-0 bg-grid-slate opacity-[0.3] -z-0"></div>
+                        <div
+                            class="shape-blob bg-brand w-40 h-40 -bottom-12 -right-12 group-hover:scale-150 transition-transform duration-700">
+                        </div>
+                        <div
+                            class="shape-blob bg-brand w-32 h-32 -top-12 -left-12 group-hover:opacity-20 transition-all">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div
+                                class="w-18 h-18 bg-brand/10 text-brand rounded-2xl flex items-center justify-center text-4xl mb-4 group-hover:bg-brand group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500 shadow-sm">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-6 text-slate-900">Management Advisory</h3>
+                            <p class="text-slate-500 mb-4 leading-relaxed text-lg">We analyze, visualize, and create
+                                future plans to help businesses overcome challenges and ensure sustainability.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-300 font-black text-4xl opacity-50">04</span>
+                                <a href="services.html"
+                                    class="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:shadow-lg group-hover:shadow-brand/30 transition-all duration-500">
+                                    <i
+                                        class="fa-solid fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 5 -->
+                    <div
+                        class="group relative p-7 rounded-xl bg-white border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)] overflow-hidden">
+                        <!-- Card Decorative Shapes -->
+                        <div class="absolute inset-0 bg-grid-slate opacity-[0.3] -z-0"></div>
+                        <div
+                            class="shape-blob bg-brand w-40 h-40 -bottom-12 -right-12 group-hover:scale-150 transition-transform duration-700">
+                        </div>
+                        <div
+                            class="shape-blob bg-brand w-32 h-32 -top-12 -left-12 group-hover:opacity-20 transition-all">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div
+                                class="w-18 h-18 bg-brand/10 text-brand rounded-2xl flex items-center justify-center text-4xl mb-4 group-hover:bg-brand group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500 shadow-sm">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-6 text-slate-900">Financial and Legal
+                            </h3>
+                            <p class="text-slate-500 mb-4 leading-relaxed text-lg">DuVolks provides expert financial and
+                                legal services, ensuring compliance with tax, zakat, and regulatory obligations.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-300 font-black text-4xl opacity-50">05</span>
+                                <a href="services.html"
+                                    class="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:shadow-lg group-hover:shadow-brand/30 transition-all duration-500">
+                                    <i
+                                        class="fa-solid fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 6 -->
+                    <div
+                        class="group relative p-7 rounded-xl bg-white border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)] overflow-hidden">
+                        <!-- Card Decorative Shapes -->
+                        <div class="absolute inset-0 bg-grid-slate opacity-[0.3] -z-0"></div>
+                        <div
+                            class="shape-blob bg-brand w-40 h-40 -bottom-12 -right-12 group-hover:scale-150 transition-transform duration-700">
+                        </div>
+                        <div
+                            class="shape-blob bg-brand w-32 h-32 -top-12 -left-12 group-hover:opacity-20 transition-all">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div
+                                class="w-18 h-18 bg-brand/10 text-brand rounded-2xl flex items-center justify-center text-4xl mb-4 group-hover:bg-brand group-hover:text-white group-hover:rotate-[10deg] transition-all duration-500 shadow-sm">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-6 text-slate-900">Enhancement Services
+                            </h3>
+                            <p class="text-slate-500 mb-4 leading-relaxed text-lg">DuVolks’ Enhancement Services
+                                optimize marketing, customer experience, digital strategy, and operations for
+                                sustainable business growth.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-300 font-black text-4xl opacity-50">06</span>
+                                <a href="services.html"
+                                    class="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:shadow-lg group-hover:shadow-brand/30 transition-all duration-500">
+                                    <i
+                                        class="fa-solid fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Us Section -->
+        <section id="about" class="py-24 bg-white relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 bg-grid-slate-100 opacity-[0.2] -z-0"></div>
+            <div class="shape-blob bg-brand w-96 h-96 -top-24 -right-24 opacity-5"></div>
+            <div class="shape-blob bg-blue-400 w-80 h-80 top-1/2 -left-24 opacity-5"></div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                    <!-- Image Side -->
+                    <div class="relative order-2 lg:order-1">
+                        <div class="relative z-10">
+                            <!-- Main Image -->
+                            <div
+                                class="relative rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)] group">
+                                <img src="./assets/images/about.png"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                                    alt="About DUVOLKS Team">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-tr from-brand/20 via-transparent to-transparent">
+                                </div>
+                            </div>
+
+                            <!-- Experience Badge -->
+                            <div
+                                class="absolute -bottom-8 -right-8 bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 animate-float z-20 hidden sm:block">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="w-16 h-16 bg-brand rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg shadow-brand/30">
+                                        <i class="fa-solid fa-award"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-4xl font-black text-slate-900 leading-none mb-1">15+</p>
+                                        <p class="text-slate-500 font-bold uppercase tracking-widest text-[10px]">Years
+                                            of Excellence</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Small Floating Card -->
+                            <div
+                                class="absolute -top-10 -left-6 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/50 animate-float [animation-delay:-2s] z-20 hidden md:block">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <p class="font-bold text-slate-800 pr-4 whitespace-nowrap">ISO 9001 Certified</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Decorative Elements -->
+                        <div
+                            class="absolute -top-15 -left-15 w-64 h-64 bg-brand/10 rounded-full blur-[80px] -z-10 animate-pulse">
+                        </div>
+                        <div
+                            class="absolute inset-0 border-2 border-brand/10 rounded-[3.5rem] translate-x-6 translate-y-6 -z-10">
+                        </div>
+                    </div>
+
+                    <!-- Content Side -->
+                    <div class="order-1 lg:order-2">
+                        <div class="mb-10">
+                            <span
+                                class="inline-flex items-center gap-3 bg-brand/10 text-brand px-5 py-2 rounded-full text-xs font-black tracking-[0.3em] uppercase mb-8">
+                                <span class="w-2 h-2 bg-brand rounded-full animate-ping"></span>
+                                About Our Company
+                            </span>
+
+                            <h2
+                                class="text-4xl md:text-5xl font-heading font-black text-slate-900 leading-[1.1] mb-8 tracking-tighter">
+                                Crafting <span class="text-brand relative inline-block">Global Strategies<span
+                                        class="absolute bottom-2 left-0 w-full h-3 bg-brand/10 -z-10"></span></span> for
+                                Your Success
+                            </h2>
+
+                            <p class="text-lg text-slate-600 mb-10 leading-relaxed font-medium">
+                                Founded in 2011, DUVOLKS has emerged as a leader in strategic consultancy. We don't just
+                                provide advice; we architect the future of your enterprise through precision, global
+                                compliance, and deep market insights.
+                            </p>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-8 mb-12">
+                            <!-- Feature 1 -->
+                            <div class="flex gap-5 group">
+                                <div
+                                    class="shrink-0 w-14 h-14 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand text-2xl group-hover:bg-brand group-hover:text-white group-hover:shadow-lg group-hover:shadow-brand/20 transition-all duration-500">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <h4 class="font-bold text-slate-900 mb-1 text-lg">Our Vision</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed font-medium">To be the global
+                                        benchmark for
+                                        strategic consultancy.</p>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div class="flex gap-5 group">
+                                <div
+                                    class="shrink-0 w-14 h-14 bg-slate-50 border border-slate-100 rounded-2xl flex items-center justify-center text-brand text-2xl group-hover:bg-brand group-hover:text-white group-hover:shadow-lg group-hover:shadow-brand/20 transition-all duration-500">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <h4 class="font-bold text-slate-900 mb-1 text-lg">Our Mission</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed font-medium">Empowering businesses
+                                        through
+                                        data-driven insights.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-8">
+                            <a href="about.html"
+                                class="bg-brand hover:bg-brand-dark text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-brand/25 active:scale-95 flex items-center gap-3 group">
+                                Explore Our Story
+                                <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                            </a>
+
+                            <div class="flex items-center gap-4">
+                                <div class="flex -space-x-3">
+                                    <img src="./assets/images/clients/client-1.jpg"
+                                        class="w-12 h-12 rounded-full border-4 border-white shadow-sm" alt="Client">
+                                    <img src="./assets/images/clients/client-2.jpg"
+                                        class="w-12 h-12 rounded-full border-4 border-white shadow-sm" alt="Client">
+                                    <div
+                                        class="w-12 h-12 rounded-full border-4 border-white bg-slate-900 text-white flex items-center justify-center text-[10px] font-bold">
+                                        10k+</div>
+                                </div>
+                                <div>
+                                    <p class="text-slate-900 font-bold leading-none mb-1">Trusted By</p>
+                                    <p class="text-xs text-slate-500 font-medium">Global Brand Leaders</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Intelligence Hub -->
+        <section id="intelligence" class="py-32 bg-slate-50 relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-slate-900/[0.02] -z-0"></div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <span
+                        class="inline-flex items-center gap-3 bg-brand/10 text-brand px-6 py-2 rounded-full text-xs font-black tracking-[0.4em] uppercase mb-6 shadow-sm">
+                        <i class="fa-solid fa-brain text-[10px]"></i>
+                        Intelligence Suite
+                    </span>
+                    <h2
+                        class="text-4xl md:text-5xl font-heading font-black text-slate-900 leading-[1.1] mb-6 tracking-tighter">
+                        Explorer our <span class="text-brand">Expertise</span>
+                    </h2>
+                    <p class="text-slate-500 text-lg font-medium leading-relaxed">
+                        Navigate the complexities of the Saudi landscape with our curated insights and operational
+                        guides.
+                    </p>
+                </div>
+
+                <!-- Main Hub Navigation -->
+                <div class="flex justify-center mb-12">
+                    <div
+                        class="inline-flex bg-white p-2 rounded-2xl shadow-xl border border-slate-100 gap-2 overflow-x-auto no-scrollbar max-w-full">
+                        <button
+                            class="main-tab active px-8 py-4 rounded-xl font-bold text-sm transition-all whitespace-nowrap flex items-center gap-3"
+                            data-category="market" id="btn-market">
+                            <i class="fa-solid fa-landmark-flag text-brand"></i>
+                            The Saudi Market
+                        </button>
+                        <button
+                            class="main-tab px-8 py-4 rounded-xl font-bold text-sm transition-all whitespace-nowrap flex items-center gap-3 text-slate-500 hover:text-brand"
+                            data-category="setup" id="btn-setup">
+                            <i class="fa-solid fa-briefcase"></i>
+                            Business Setup
+                        </button>
+                        <button
+                            class="main-tab px-8 py-4 rounded-xl font-bold text-sm transition-all whitespace-nowrap flex items-center gap-3 text-slate-500 hover:text-brand"
+                            data-category="run" id="btn-run">
+                            <i class="fa-solid fa-gears"></i>
+                            Run Your Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Explorer Interface -->
+                <div class="grid lg:grid-cols-12 gap-8 items-stretch min-h-[600px]">
+                    <!-- Sub Sidebar -->
+                    <div class="lg:col-span-3">
+                        <div id="subtabs-container" class="flex flex-col gap-3 h-full justify-center">
+                            <!-- Dynamically populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Content Window -->
+                    <div class="lg:col-span-9">
+                        <div id="intelligence-screen"
+                            class="bg-white rounded-2xl shadow-2xl border border-slate-100 h-full overflow-hidden relative group/screen">
+                            <div class="grid md:grid-cols-2 h-full">
+                                <div
+                                    class="p-8 md:p-12 lg:p-16 flex flex-col justify-center relative z-20 bg-white md:bg-transparent">
+                                    <div id="content-loader"
+                                        class="absolute inset-0 bg-white/80 backdrop-blur-sm z-30 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+                                        <div
+                                            class="w-10 h-10 border-4 border-brand/20 border-t-brand rounded-full animate-spin">
+                                        </div>
+                                    </div>
+                                    <h3 id="display-title"
+                                        class="text-2xl lg:text-4xl font-heading font-black text-slate-900 mb-8 leading-[1.1] tracking-tighter opacity-0 translate-y-4 transition-all duration-500">
+                                        Market Insights
+                                    </h3>
+                                    <p id="display-text"
+                                        class="text-slate-500 text-lg leading-relaxed mb-12 font-medium opacity-0 translate-y-4 transition-all duration-500 [transition-delay:100ms]">
+                                        Loading insights...
+                                    </p>
+                                    <div class="opacity-0 translate-y-4 transition-all duration-500 [transition-delay:200ms]"
+                                        id="display-link-wrapper">
+                                        <a href="#"
+                                            class="group/btn relative inline-flex items-center gap-4 bg-brand text-white px-8 py-3.5 rounded-2xl font-bold text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-brand/20">
+                                            <span
+                                                class="relative z-10 transition-transform group-hover/btn:translate-x-1">Consult
+                                                an Expert</span>
+                                            <i
+                                                class="fa-solid fa-arrow-right relative z-10 transition-transform group-hover/btn:translate-x-2"></i>
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-brand opacity-0 group-hover/btn:opacity-100 transition-opacity">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="relative overflow-hidden min-h-[400px]">
+                                    <img id="display-img" src="./assets/images/intelligence/m1.jpg"
+                                        class="absolute inset-0 w-full h-full object-cover group-hover/screen:scale-110 transition-transform duration-1000"
+                                        alt="Intelligence Image">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-l from-transparent to-white/10 md:to-white">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Decorative Element -->
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand/5 rounded-full blur-[120px] -z-0"></div>
+        </section>
+
+        <!-- Why Choose Us / Kingdom Opportunities -->
+        <section id="opportunities" class="py-24 bg-slate-950 text-white relative overflow-hidden">
+            <!-- Dynamic Background -->
+            <div class="absolute inset-0 bg-grid-white/[0.03] -z-0"></div>
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-brand/10 via-transparent to-transparent opacity-50">
+            </div>
+            <div class="shape-blob bg-brand w-[500px] h-[500px] -top-48 -left-48 opacity-10 animate-pulse"></div>
+            <div class="shape-blob bg-emerald-500 w-[400px] h-[400px] -bottom-48 -right-48 opacity-10"></div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <span
+                        class="inline-flex items-center gap-3 bg-brand/20 text-brand px-5 py-2 rounded-full text-xs font-black tracking-[0.3em] uppercase mb-6 border border-brand/30">
+                        <i class="fa-solid fa-star-of-life animate-spin-slow"></i>
+                        Why Choose the Kingdom
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-black leading-[1.1] mb-6 tracking-tighter">
+                        Game-Changing <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-emerald-400">Opportunities</span>
+                    </h2>
+                    <p class="text-slate-400 text-lg font-medium leading-relaxed">
+                        Experience an ambitious reform journey fueled by vision and a young, skilled workforce.
+                        Join a market that is leading the financial sector globally.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Ambitious Reform -->
+                    <div
+                        class="group relative p-7 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.07] hover:border-brand/40 transition-all duration-500 overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-brand/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="relative z-10">
+                            <div
+                                class="w-16 h-16 bg-brand/20 text-brand rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                                <i class="fa-solid fa-route"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Ambitious Reform Journey</h3>
+                            <p class="text-slate-400 leading-relaxed font-medium">A nation-wide transformation driving
+                                unprecedented economic growth and structural modernization.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Skilled Workforce -->
+                    <div
+                        class="group relative p-7 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.07] hover:border-emerald-400/40 transition-all duration-500 overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="relative z-10">
+                            <div
+                                class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Young & Skilled Workforce</h3>
+                            <p class="text-slate-400 leading-relaxed font-medium">Access a vibrant pool of talented,
+                                tech-savvy professionals ready to drive your business forward.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Quality of Life -->
+                    <div
+                        class="group relative p-7 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.07] hover:border-blue-400/40 transition-all duration-500 overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="relative z-10">
+                            <div
+                                class="w-16 h-16 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Expanding Quality of Life</h3>
+                            <p class="text-slate-400 leading-relaxed font-medium">A world-class environment offering
+                                superior lifestyle amenities, safety, and cultural richness.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Financial Sector -->
+                    <div
+                        class="group relative p-7 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.07] hover:border-yellow-400/40 transition-all duration-500 overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="relative z-10">
+                            <div
+                                class="w-16 h-16 bg-yellow-500/20 text-yellow-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Leading Financial Sector</h3>
+                            <p class="text-slate-400 leading-relaxed font-medium">Strong banking infrastructure and
+                                robust capital markets providing global investment security.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Investor Friendly -->
+                    <div
+                        class="group relative p-7 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.07] hover:border-purple-400/40 transition-all duration-500 overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="relative z-10">
+                            <div
+                                class="w-16 h-16 bg-purple-500/20 text-purple-400 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Investor-Friendly Country</h3>
+                            <p class="text-slate-400 leading-relaxed font-medium">Simplified regulations, tax
+                                incentives, and 100% foreign ownership opportunities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Your Partnership -->
+                    <div
+                        class="group relative p-7 rounded-2xl bg-brand hover:scale-[1.02] transition-all duration-500 overflow-hidden shadow-[0_20px_50px_rgba(0,102,51,0.3)]">
+                        <div
+                            class="absolute top-0 left-0 w-full h-full bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div>
+                                <h3 class="text-3xl font-black mb-4">Start Your Journey with DUVOLKS</h3>
+                                <p class="text-white/80 leading-relaxed font-medium">We bridge the gap between global
+                                    investors and Kingdom opportunities.</p>
+                            </div>
+                            <a href="contact.html"
+                                class="mt-8 inline-flex items-center gap-3 bg-white text-brand px-8 py-4 rounded-2xl font-bold transition-all hover:bg-slate-100">
+                                Get Started
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 5-Step Process Section (Advanced Premium Design) -->
+        <section id="process" class="py-32 bg-white relative overflow-hidden">
+            <!-- Luxury Background Elements -->
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,102,51,0.03),transparent)] pointer-events-none">
+            </div>
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 translate-x-1/4 -z-10"></div>
+            <div class="absolute inset-0 bg-dots opacity-[0.4] -z-10"></div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row items-end justify-between mb-24 gap-8">
+                    <div class="max-w-2xl">
+                        <span
+                            class="inline-flex items-center gap-3 bg-brand/10 text-brand px-6 py-2 rounded-full text-xs font-black tracking-[0.4em] uppercase mb-6 shadow-sm">
+                            <i class="fa-solid fa-bolt-lightning text-[10px]"></i>
+                            Precision Pipeline
+                        </span>
+                        <h2
+                            class="text-4xl md:text-6xl font-heading font-black text-slate-900 leading-[1.05] tracking-tighter">
+                            A Masterclass in <br>
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-emerald-500">Business
+                                Setup</span>
+                        </h2>
+                    </div>
+                    <p
+                        class="text-slate-500 text-lg font-medium max-w-sm border-l-4 border-brand/20 pl-6 leading-relaxed">
+                        We've engineered a frictionless 5-step framework to transition your brand into the Saudi market
+                        with surgical precision.
+                    </p>
+                </div>
+
+                <!-- Staggered Process Grid -->
+                <div class="grid lg:grid-cols-5 gap-8 items-start">
+                    <!-- Step 01 -->
+                    <div class="group relative pt-12">
+                        <div
+                            class="absolute -top-6 left-8 text-8xl font-black text-slate-100 group-hover:text-brand/10 transition-colors duration-500 -z-10 select-none">
+                            01</div>
+                        <div
+                            class="bg-white p-6 rounded-2xl border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group-hover:shadow-[0_40px_80px_rgba(0,102,51,0.1)] group-hover:-translate-y-3 transition-all duration-700 relative overflow-hidden">
+                            <!-- Card Texture -->
+                            <div class="absolute inset-0 bg-grid-slate opacity-[0.2] -z-0"></div>
+                            <div
+                                class="absolute top-0 left-0 w-2 h-0 bg-brand group-hover:h-full transition-all duration-700">
+                            </div>
+                            <div
+                                class="w-16 h-16 bg-slate-50 text-brand rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand group-hover:text-white group-hover:rotate-[15deg] transition-all duration-500">
+                                <i class="fa-solid fa-comments-dollar"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 tracking-tight">Initial Consultation</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed font-medium">Strategic mapping of your
+                                business goals and legal requirements.</p>
+                            <div class="mt-8 flex justify-end">
+                                <span
+                                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-brand group-hover:bg-brand/10 transition-colors">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 (Offset) -->
+                    <div class="group relative pt-12 lg:mt-20">
+                        <div
+                            class="absolute -top-6 left-8 text-8xl font-black text-slate-100 group-hover:text-brand/10 transition-colors duration-500 -z-10 select-none">
+                            02</div>
+                        <div
+                            class="bg-white p-6 rounded-2xl border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group-hover:shadow-[0_40px_80px_rgba(0,102,51,0.1)] group-hover:-translate-y-3 transition-all duration-700 relative overflow-hidden">
+                            <!-- Card Texture -->
+                            <div class="absolute inset-0 bg-grid-slate opacity-[0.2] -z-0"></div>
+                            <div
+                                class="absolute top-0 left-0 w-2 h-0 bg-emerald-500 group-hover:h-full transition-all duration-700">
+                            </div>
+                            <div
+                                class="w-16 h-16 bg-slate-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-emerald-500 group-hover:text-white group-hover:rotate-[15deg] transition-all duration-500">
+                                <i class="fa-solid fa-folder-tree"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 tracking-tight">Document Preparation</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed font-medium">Expert handling of complex
+                                regulatory paperwork and compliance.</p>
+                            <div class="mt-8 flex justify-end">
+                                <span
+                                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-emerald-500 group-hover:bg-emerald-50 transition-colors">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="group relative pt-12">
+                        <div
+                            class="absolute -top-6 left-8 text-8xl font-black text-slate-100 group-hover:text-brand/10 transition-colors duration-500 -z-10 select-none">
+                            03</div>
+                        <div
+                            class="bg-white p-6 rounded-2xl border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group-hover:shadow-[0_40px_80px_rgba(0,102,51,0.1)] group-hover:-translate-y-3 transition-all duration-700 relative overflow-hidden">
+                            <!-- Card Texture -->
+                            <div class="absolute inset-0 bg-grid-slate opacity-[0.2] -z-0"></div>
+                            <div
+                                class="absolute top-0 left-0 w-2 h-0 bg-blue-500 group-hover:h-full transition-all duration-700">
+                            </div>
+                            <div
+                                class="w-16 h-16 bg-slate-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-blue-500 group-hover:text-white group-hover:rotate-[15deg] transition-all duration-500">
+                                <i class="fa-solid fa-building-shield"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 tracking-tight">Gov Approvals</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed font-medium">Liaising with Saudi
+                                authorities for seamless application follow-ups.</p>
+                            <div class="mt-8 flex justify-end">
+                                <span
+                                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-blue-500 group-hover:bg-blue-50 transition-colors">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 04 (Offset) -->
+                    <div class="group relative pt-12 lg:mt-20">
+                        <div
+                            class="absolute -top-6 left-8 text-8xl font-black text-slate-100 group-hover:text-brand/10 transition-colors duration-500 -z-10 select-none">
+                            04</div>
+                        <div
+                            class="bg-white p-6 rounded-2xl border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group-hover:shadow-[0_40px_80px_rgba(0,102,51,0.1)] group-hover:-translate-y-3 transition-all duration-700 relative overflow-hidden">
+                            <!-- Card Texture -->
+                            <div class="absolute inset-0 bg-grid-slate opacity-[0.2] -z-0"></div>
+                            <div
+                                class="absolute top-0 left-0 w-2 h-0 bg-brand group-hover:h-full transition-all duration-700">
+                            </div>
+                            <div
+                                class="w-16 h-16 bg-slate-50 text-brand rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand group-hover:text-white group-hover:rotate-[15deg] transition-all duration-500">
+                                <i class="fa-solid fa-city"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 tracking-tight">Establishment</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed font-medium">Official registration and
+                                physical infrastructure setup for your HQ.</p>
+                            <div class="mt-8 flex justify-end">
+                                <span
+                                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-brand group-hover:bg-brand/10 transition-colors">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 05 -->
+                    <div class="group relative pt-12">
+                        <div
+                            class="absolute -top-6 left-8 text-8xl font-black text-slate-100 group-hover:text-brand/10 transition-colors duration-500 -z-10 select-none">
+                            05</div>
+                        <div
+                            class="bg-white p-6 rounded-2xl border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group-hover:shadow-[0_40px_80px_rgba(0,102,51,0.1)] group-hover:-translate-y-3 transition-all duration-700 relative overflow-hidden">
+                            <!-- Card Texture -->
+                            <div class="absolute inset-0 bg-grid-slate opacity-[0.2] -z-0"></div>
+                            <div
+                                class="absolute top-0 left-0 w-2 h-0 bg-emerald-500 group-hover:h-full transition-all duration-700">
+                            </div>
+                            <div
+                                class="w-16 h-16 bg-slate-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-emerald-500 group-hover:text-white group-hover:rotate-[15deg] transition-all duration-500">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 tracking-tight">Post-Setup Care</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed font-medium">Ongoing advisory for banking,
+                                visas, and exponential market growth.</p>
+                            <div class="mt-8 flex justify-end">
+                                <span
+                                    class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-emerald-500 group-hover:bg-emerald-50 transition-colors">
+                                    <i class="fa-solid fa-check-double"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Discovery Section (Logo Marquee) -->
+        <section class="relative py-20 bg-white overflow-hidden border-y border-slate-100">
+            <!-- Background Structure Shapes -->
+            <div class="absolute inset-0 bg-grid-slate -z-10"></div>
+            <div class="absolute inset-0 bg-dots -z-10"></div>
+            <div class="shape-blob bg-brand w-96 h-96 -top-24 -left-24"></div>
+            <div class="shape-blob bg-blue-400 w-80 h-80 -bottom-24 -right-24"></div>
+            <div
+                class="absolute top-1/2 left-1/4 w-[500px] h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent rotate-[35deg] -z-10">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/3 w-[500px] h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent rotate-[-35deg] -z-10">
+            </div>
+
+            <div class="container mx-auto px-4 mb-12 relative z-10">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left">
+                        <span class="text-brand font-bold tracking-[0.2em] uppercase text-xs mb-2 block">Our Strategic
+                            Network</span>
+                        <h3 class="text-3xl font-heading font-bold text-slate-900">Partnering with Industry Leaders</h3>
+                    </div>
+                    <p class="text-slate-500 max-w-sm text-center md:text-right text-sm">We provide world-class
+                        solutions for startups and Fortune 500 companies globally.</p>
+                </div>
+            </div>
+
+            <!-- Brands Swiper -->
+            <div class="relative z-10 py-10">
+                <div class="swiper brandSwiper">
+                    <div class="swiper-wrapper flex items-center">
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/google.png"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Google">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/amazon.png"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Amazon">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/microsoft.png"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Microsoft">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/apple.png"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Apple">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/netflix.png"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Netflix">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/adobe.svg"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Adobe">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/amazon.png"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Amazon">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/microsoft.png"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Microsoft">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/apple.png"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Apple">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/netflix.png"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Netflix">
+                        </div>
+                        <div class="swiper-slide flex justify-center px-10">
+                            <img src="./assets/images/logos/adobe.svg"
+                                class="h-12 w-auto object-contain transition-all duration-700" alt="Adobe">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subtle Center Indicator (Hidden but guides the eye) -->
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-brand/5 blur-[40px] rounded-full pointer-events-none -z-10">
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <!-- Header -->
+                    <div class="text-center mb-24">
+                        <span class="text-brand font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block">Got
+                            Questions?</span>
+                        <h2 class="text-2xl md:text-4xl font-heading font-extrabold text-[#0f172a] tracking-tight">Your
+                            Guide to Success</h2>
+                    </div>
+
+                    <div class="grid lg:grid-cols-12 gap-10 items-center">
+                        <!-- Left: Image with Floating Card -->
+                        <div class="lg:col-span-5">
+                            <div class="relative rounded-md overflow-hidden group bg-brand/80 p-4">
+                                <img src="./assets/images/faq/faq-main.jpg"
+                                    class="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-110"
+                                    alt="FAQ Support">
+                                <div class="absolute inset-0 bg-slate-900/10 transition-opacity"></div>
+
+                                <!-- Floating Help Card -->
+                                <div class="absolute inset-0 flex items-center justify-center p-8">
+                                    <div
+                                        class="bg-white/90 backdrop-blur-xl p-10 rounded-3xl shadow-2xl border border-white/20 transform transition-all duration-500 group-hover:scale-105">
+                                        <h4 class="font-extrabold text-[#0f172a] text-2xl mb-4">Need custom help?</h4>
+                                        <a href="contact.html"
+                                            class="text-brand font-extrabold flex items-center gap-2 group/link">
+                                            Chat with us
+                                            <i
+                                                class="fa-solid fa-chevron-right text-xs transition-transform group-hover/link:translate-x-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: FAQ Accordion -->
+                        <div class="lg:col-span-7 space-y-4">
+                            <!-- FAQ Item 1 -->
+                            <div class="faq-item">
+                                <button
+                                    class="faq-btn w-full p-8 text-left bg-slate-50/50 rounded-[2rem] border border-transparent hover:bg-white hover:border-slate-100 hover:shadow-xl transition-all flex items-center justify-between group"
+                                    aria-expanded="false">
+                                    <span class="text-xl font-bold text-[#0f172a] pr-8">What is the typical timeline for
+                                        business setup?</span>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center border border-slate-100 group-hover:bg-brand group-hover:text-white transition-all">
+                                        <i class="fa-solid fa-plus text-xs transition-transform duration-500"></i>
+                                    </div>
+                                </button>
+                                <div
+                                    class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                    <div class="p-8 pt-2 text-slate-500 text-lg leading-relaxed">
+                                        Timelines vary by jurisdiction and industry, but most setups range from 5 to 14
+                                        business days once all documentation is submitted.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="faq-item">
+                                <button
+                                    class="faq-btn w-full p-8 text-left bg-slate-50/50 rounded-[2rem] border border-transparent hover:bg-white hover:border-slate-100 hover:shadow-xl transition-all flex items-center justify-between group"
+                                    aria-expanded="false">
+                                    <span class="text-xl font-bold text-[#0f172a] pr-8">Do global operations require a
+                                        local representative?</span>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center border border-slate-100 group-hover:bg-brand group-hover:text-white transition-all">
+                                        <i class="fa-solid fa-plus text-xs transition-transform duration-500"></i>
+                                    </div>
+                                </button>
+                                <div
+                                    class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                    <div class="p-8 pt-2 text-slate-500 text-lg leading-relaxed">
+                                        In many regions, yes. We provide professional proxy and local directorship
+                                        services to ensure you meet all legal requirements without losing control.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div class="faq-item">
+                                <button
+                                    class="faq-btn w-full p-8 text-left bg-slate-50/50 rounded-[2rem] border border-transparent hover:bg-white hover:border-slate-100 hover:shadow-xl transition-all flex items-center justify-between group"
+                                    aria-expanded="false">
+                                    <span class="text-xl font-bold text-[#0f172a] pr-8">How do you handle corporate
+                                        compliance?</span>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center border border-slate-100 group-hover:bg-brand group-hover:text-white transition-all">
+                                        <i class="fa-solid fa-plus text-xs transition-transform duration-500"></i>
+                                    </div>
+                                </button>
+                                <div
+                                    class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                    <div class="p-8 pt-2 text-slate-500 text-lg leading-relaxed">
+                                        Our dedicated compliance team performs quarterly audits and handles all
+                                        regulatory filings to keep your business in good standing globally.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20 bg-slate-100">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-20">
+                    <div class="max-w-2xl">
+                        <span class="text-brand font-bold tracking-[0.2em] uppercase text-sm mb-4 inline-block">Voices
+                            of Trust</span>
+                        <h2 class="text-4xl md:text-5xl font-heading font-bold text-slate-900 leading-tight">Partnering
+                            for Greatness</h2>
+                    </div>
+                    <div class="flex gap-4 mt-8 md:mt-0">
+                        <button
+                            class="testi-prev w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center hover:bg-brand hover:text-white hover:border-brand transition-all">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button
+                            class="testi-next w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center hover:bg-brand hover:text-white hover:border-brand transition-all">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="swiper testimonialSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide p-2">
+                            <div
+                                class="bg-white p-5 rounded-lg border border-slate-100 relative group hover:shadow-2xl transition-all duration-500">
+                                <div
+                                    class="text-indigo-600 mb-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                                <p class="text-slate-600 italic mb-10 text-lg leading-relaxed">
+                                    "DUVOLKS transformed our vision into a scalable enterprise. Their strategic insights
+                                    are truly world-class."
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <img src="./assets/images/testimonials/testi-1.jpg"
+                                        class="w-16 h-16 rounded-2xl object-cover" alt="User">
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 text-lg">Alex Rivera</h5>
+                                        <p class="text-sm text-slate-500">Founder, CloudNexus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide p-2">
+                            <div
+                                class="bg-white p-5 rounded-lg border border-slate-100 relative group hover:shadow-2xl transition-all duration-500">
+                                <div
+                                    class="text-indigo-600 mb-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                                <p class="text-slate-600 italic mb-10 text-lg leading-relaxed">
+                                    "DUVOLKS transformed our vision into a scalable enterprise. Their strategic insights
+                                    are truly world-class."
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <img src="./assets/images/testimonials/testi-3.jpg"
+                                        class="w-16 h-16 rounded-2xl object-cover" alt="User">
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 text-lg">Alex Rivera</h5>
+                                        <p class="text-sm text-slate-500">Founder, CloudNexus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide p-2">
+                            <div
+                                class="bg-white p-5 rounded-lg border border-slate-100 relative group hover:shadow-2xl transition-all duration-500">
+                                <div
+                                    class="text-indigo-600 mb-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                                <p class="text-slate-600 italic mb-10 text-lg leading-relaxed">
+                                    "DUVOLKS transformed our vision into a scalable enterprise. Their strategic insights
+                                    are truly world-class."
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <img src="./assets/images/testimonials/testi-2.jpg"
+                                        class="w-16 h-16 rounded-2xl object-cover" alt="User">
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 text-lg">Alex Rivera</h5>
+                                        <p class="text-sm text-slate-500">Founder, CloudNexus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide p-2">
+                            <div
+                                class="bg-white p-5 rounded-lg border border-slate-100 relative group hover:shadow-2xl transition-all duration-500">
+                                <div
+                                    class="text-indigo-600 mb-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                                <p class="text-slate-600 italic mb-10 text-lg leading-relaxed">
+                                    "DUVOLKS transformed our vision into a scalable enterprise. Their strategic insights
+                                    are truly world-class."
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <img src="./assets/images/testimonials/testi-1.jpg"
+                                        class="w-16 h-16 rounded-2xl object-cover" alt="User">
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 text-lg">Alex Rivera</h5>
+                                        <p class="text-sm text-slate-500">Founder, CloudNexus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide p-2">
+                            <div
+                                class="bg-white p-5 rounded-lg border border-slate-100 relative group hover:shadow-2xl transition-all duration-500">
+                                <div
+                                    class="text-indigo-600 mb-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                                <p class="text-slate-600 italic mb-10 text-lg leading-relaxed">
+                                    "DUVOLKS transformed our vision into a scalable enterprise. Their strategic insights
+                                    are truly world-class."
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <img src="./assets/images/testimonials/testi-1.jpg"
+                                        class="w-16 h-16 rounded-2xl object-cover" alt="User">
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 text-lg">Alex Rivera</h5>
+                                        <p class="text-sm text-slate-500">Founder, CloudNexus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-brand relative overflow-hidden mx-4 md:mx-6 mb-12 rounded-2xl">
+            <div
+                class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10">
+            </div>
+            <div class="container mx-auto px-10 relative z-10 text-center md:text-left py-12">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                    <div class="text-white max-w-3xl">
+                        <h2 class="text-2xl md:text-4xl font-heading font-bold mb-4 leading-tight">Let's Build Your
+                            <span class="bg-white text-brand px-4 py-1 rounded-2xl">Empire</span> Together
+                        </h2>
+                        <p class="text-white/80 text-xl leading-relaxed">Start your journey today with a 30-minute free
+                            discovery call.</p>
+                    </div>
+                    <div>
+                        <a href="contact.html"
+                            class="inline-block bg-white text-brand px-12 py-3 rounded-3xl font-bold text-xl hover:bg-slate-100 transition-all shadow-2xl active:scale-95 whitespace-nowrap">
+                            Contact Us Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-32 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-20 mb-24">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-4 mb-10">
+                        <div
+                            class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="text-3xl font-heading font-bold tracking-tight text-white uppercase">
+                            DU<span class="text-brand">VOLKS</span>
+                        </span>
+                    </a>
+                    <p class="text-lg leading-relaxed mb-10 opacity-70">
+                        Premier global business consultancy specializing in corporate growth, strategic planning, and
+                        legal compliance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Resources</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="about.html" class="hover:text-brand transition-colors">Company Story</a></li>
+                        <li><a href="services.html" class="hover:text-brand transition-colors">Our Ecosystem</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Career Pathways</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Specialties</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="#" class="hover:text-brand transition-colors">Mainland Setup</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Offshore Banking</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Golden Visa</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Tax Residency</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Global Office</h4>
+                    <ul class="space-y-8 text-lg">
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-map-pin text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">Level 42, Burj Khalifa District, Dubai, UAE</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-phone-volume text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">+971 4 800 VOLKS</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-envelope-open text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70 underline underline-offset-4">hello@duvolks.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-8 opacity-40 text-sm">
+                <p>&copy; 2026 DUVOLKS International. All rights reserved.</p>
+                <div class="flex gap-12">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Charter</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Operations</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

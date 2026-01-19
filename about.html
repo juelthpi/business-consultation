@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | DUVOLKS Consultants</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Local Tailwind v4 Compiled CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand selection:text-white">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-4 md:px-6">
+            <nav
+                class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-slate-200/50 px-6 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 bg-brand rounded-xl flex items-center justify-center text-white text-xl group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-2xl font-heading font-bold tracking-tight text-slate-800">
+                        DU<span class="text-brand">VOLKS</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                    <li><a href="index.html" class="hover:text-brand transition-all">Home</a></li>
+                    <li><a href="about.html" class="text-brand font-bold">About</a></li>
+                    <li><a href="services.html" class="hover:text-brand transition-all">Services</a></li>
+                    <li><a href="contact.html" class="hover:text-brand transition-all">Contact</a></li>
+                </ul>
+
+                <div class="flex items-center gap-4">
+                    <a href="contact.html"
+                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95">
+                        Get Started
+                    </a>
+                    <button id="mobileMenuBtn"
+                        class="lg:hidden w-10 h-10 flex items-center justify-center text-slate-700 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Off-canvas -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
+        <!-- Backdrop -->
+        <div id="mobileMenuBackdrop"
+            class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+
+        <!-- Menu Content -->
+        <div id="mobileMenuContent"
+            class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
+            <div class="flex items-center justify-between mb-12">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-sm">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-800">DU<span
+                            class="text-brand">VOLKS</span></span>
+                </a>
+                <button id="closeMenuBtn"
+                    class="w-10 h-10 flex items-center justify-center text-slate-500 text-xl hover:text-brand transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <nav class="flex-grow">
+                <ul class="space-y-6">
+                    <li><a href="index.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Home</a>
+                    </li>
+                    <li><a href="about.html" class="text-base font-bold text-brand block">About</a></li>
+                    <li><a href="services.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Services</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mt-auto pt-10 border-t border-slate-100">
+                <a href="contact.html"
+                    class="w-full bg-brand text-white py-3 rounded-2xl font-bold text-center block shadow-lg shadow-brand/20 active:scale-95 text-base">
+                    Get Started
+                </a>
+                <div class="flex items-center justify-center gap-6 mt-8">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="pt-48 pb-24 bg-slate-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-brand/5 -z-0"></div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h1 class="text-5xl md:text-7xl font-heading font-bold mb-8">Our Journey to <span
+                        class="text-brand">Excellence</span></h1>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">Dedicated to empowering businesses
+                    through strategic innovation and world-class consultancy since 2011.</p>
+            </div>
+        </section>
+
+        <!-- Mission/Vision -->
+        <section class="py-32 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <span class="text-brand font-bold tracking-widest uppercase text-sm mb-4 inline-block">The
+                            Foundation</span>
+                        <h2 class="text-4xl md:text-5xl font-heading font-bold mb-8 text-slate-900">Empowering Ambition
+                            with Precision</h2>
+                        <img src="./assets/images/about.png" class="rounded-[3rem] shadow-2xl mb-10" alt="About">
+                    </div>
+                    <div class="space-y-12">
+                        <div
+                            class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:bg-white hover:shadow-xl transition-all">
+                            <div
+                                class="w-16 h-16 bg-brand/10 text-brand rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand group-hover:text-white transition-all">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+                            <p class="text-slate-500 text-lg leading-relaxed">To be the world's most trusted partner for
+                                sustainable corporate growth and international market expansion.</p>
+                        </div>
+                        <div
+                            class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:bg-white hover:shadow-xl transition-all">
+                            <div
+                                class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand group-hover:text-white transition-all">
+                                <i class="fa-solid fa-bullseye-arrow"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                            <p class="text-slate-500 text-lg leading-relaxed">Providing high-impact strategic solutions
+                                that simplify complexity and drive measurable success for our clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values -->
+        <section class="py-32 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-slate-900">The Values We Live By</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="p-10 bg-white rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-slate-100 text-center group">
+                        <div class="text-brand text-5xl mb-8 group-hover:scale-110 transition-transform"><i
+                                class="fa-solid fa-hand-holding-heart"></i></div>
+                        <h4 class="text-2xl font-bold mb-4">Integrity</h4>
+                        <p class="text-slate-500">Unwavering commitment to honesty and ethical practices in every
+                            engagement.</p>
+                    </div>
+                    <div
+                        class="p-10 bg-white rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-slate-100 text-center group">
+                        <div class="text-brand text-5xl mb-8 group-hover:scale-110 transition-transform"><i
+                                class="fa-solid fa-lightbulb-on"></i></div>
+                        <h4 class="text-2xl font-bold mb-4">Innovation</h4>
+                        <p class="text-slate-500">Constantly evolving our strategies to stay ahead of global market
+                            shifts.</p>
+                    </div>
+                    <div
+                        class="p-10 bg-white rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-slate-100 text-center group">
+                        <div class="text-brand text-5xl mb-8 group-hover:scale-110 transition-transform"><i
+                                class="fa-solid fa-gem"></i></div>
+                        <h4 class="text-2xl font-bold mb-4">Quality</h4>
+                        <p class="text-slate-500">Delivering excellence that sets new benchmarks for corporate
+                            consultancy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-32 pb-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 DUVOLKS International. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

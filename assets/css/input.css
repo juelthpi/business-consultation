@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+@theme {
+    --color-brand: #006633;
+    --color-brand-light: #00cc66;
+    --color-brand-dark: #004d26;
+
+    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-heading: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+    --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+    --animate-float: float 3s ease-in-out infinite;
+    --animate-marquee: marquee 30s linear infinite;
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+/* Custom Styles */
+:root {
+    --brand-color: #006633;
+}
+
+.container {
+    max-width: 1450px;
+    padding: 0 1rem;
+    margin: auto;
+}
+
+::selection {
+    background-color: var(--brand-color);
+    color: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--brand-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #004d26;
+}
+
+/* Header background change on scroll */
+.header-scrolled {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.header-scrolled nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Swiper Pagination Customization */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--brand-color) !important;
+    opacity: 1;
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* Section Transitions */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glassmorphism utility */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* FAQ Modern Design */
+.faq-button[aria-expanded="true"] {
+    background-color: var(--brand-color);
+    color: white;
+}
+
+.faq-button[aria-expanded="true"] i {
+    transform: rotate(180deg);
+    color: white;
+}
+
+/* Card Hover Effects */
+.hover-card-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 102, 51, 0.15);
+}
+
+/* Structural Background Patterns */
+.bg-grid-slate {
+    background-image:
+        linear-gradient(to right, rgb(241 245 249 / 0.5) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(241 245 249 / 0.5) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.bg-grid-dark {
+    background-image:
+        linear-gradient(to right, rgb(255 255 255 / 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(255 255 255 / 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.bg-dots {
+    background-image: radial-gradient(rgb(203 213 225 / 0.3) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+}
+
+.shape-blob {
+    @apply absolute rounded-full blur-[60px] opacity-10 pointer-events-none;
+}
+
+/* Spotlight Effect: Gray out all logos except the center one */
+.brandSwiper .swiper-slide img {
+    filter: grayscale(100%) opacity(0.2);
+    transform: scale(0.85);
+}
+
+.brandSwiper .swiper-slide-active img {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}
+
+/* Hover effect fallback */
+.brandSwiper .swiper-slide:hover img {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}
+
+/* Custom Tab Styles */
+.main-tab.active {
+    background-color: var(--brand-color);
+    color: white;
+    box-shadow: 0 10px 25px -5px rgba(0, 102, 51, 0.4);
+}
+
+.main-tab.active i {
+    color: white !important;
+}
+
+.sub-tab {
+    @apply flex items-center gap-4 px-5 py-3.5 rounded-xl font-bold text-slate-500 border border-transparent transition-all cursor-pointer text-left w-full whitespace-nowrap lg:whitespace-normal;
+}
+
+.sub-tab:hover {
+    @apply bg-white border-slate-100 text-brand shadow-lg lg:translate-x-1;
+}
+
+.sub-tab.active {
+    @apply bg-white border-slate-200 text-brand shadow-xl lg:translate-x-2 lg:pl-8;
+}
+
+/* Responsive adjustment for intelligence hub */
+@media (max-width: 1023px) {
+    #intelligence .inline-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .main-tab {
+        padding: 0.6rem 1rem !important;
+        font-size: 0.75rem !important;
+        border-radius: 0.75rem !important;
+    }
+
+    #subtabs-container {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 0.4rem !important;
+        overflow-x: visible !important;
+        padding-bottom: 0 !important;
+    }
+
+    .sub-tab {
+        width: auto !important;
+        min-width: 0 !important;
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.7rem !important;
+        border-radius: 0.6rem !important;
+        background-color: white !important;
+        border: 1px solid rgb(241 245 249) !important;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .sub-tab i:last-child {
+        display: none !important;
+        /* Hide chevron to save space */
+    }
+
+    .sub-tab.active {
+        background-color: var(--brand-color) !important;
+        color: white !important;
+        border-color: var(--brand-color) !important;
+        box-shadow: 0 4px 10px rgba(0, 102, 51, 0.2) !important;
+    }
+
+    .sub-tab div {
+        display: none !important;
+        /* Hide icon box to save space */
+    }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
