@@ -3,6 +3,12 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Initialize AOS
+    AOS.init({
+        once: true,
+        mirror: false
+    });
+
     // 1. Initialize Hero Swiper
     const heroSwiper = new Swiper('.heroSwiper', {
         loop: true,
