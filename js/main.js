@@ -4,107 +4,122 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // 0. Initialize AOS
-    AOS.init({
-        once: true,
-        mirror: false
-    });
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            once: true,
+            mirror: false
+        });
+    }
 
-    // 1. Initialize Hero Swiper
-    const heroSwiper = new Swiper('.heroSwiper', {
-        loop: true,
-        effect: 'fade',
-        speed: 1000,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        fadeEffect: {
-            crossFade: true
+    // 1. Initialize Swipers (Only if Swiper is defined and elements exist)
+    if (typeof Swiper !== 'undefined') {
+        // Hero Swiper
+        if (document.querySelector('.heroSwiper')) {
+            const heroSwiper = new Swiper('.heroSwiper', {
+                loop: true,
+                effect: 'fade',
+                speed: 1000,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                fadeEffect: {
+                    crossFade: true
+                }
+            });
         }
-    });
 
-    // 2. Initialize Testimonial Swiper
-    const testimonialSwiper = new Swiper('.testimonialSwiper', {
-        loop: true,
-        spaceBetween: 10,
-        speed: 800,
-        autoplay: {
-            delay: 6000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: '.testi-next',
-            prevEl: '.testi-prev',
-        },
-        breakpoints: {
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1280: { slidesPerView: 3 },
+        // Testimonial Swiper
+        if (document.querySelector('.testimonialSwiper')) {
+            const testimonialSwiper = new Swiper('.testimonialSwiper', {
+                loop: true,
+                spaceBetween: 10,
+                speed: 800,
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.testi-next',
+                    prevEl: '.testi-prev',
+                },
+                breakpoints: {
+                    640: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    1280: { slidesPerView: 3 },
+                }
+            });
         }
-    });
 
-    // 2.5 Initialize Brand Swiper
-    const brandSwiper = new Swiper('.brandSwiper', {
-        loop: true,
-        speed: 4000,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
-        },
-        slidesPerView: 2,
-        centeredSlides: true,
-        allowTouchMove: false,
-        breakpoints: {
-            640: { slidesPerView: 3 },
-            1024: { slidesPerView: 7 },
+        // Brand Swiper
+        if (document.querySelector('.brandSwiper')) {
+            const brandSwiper = new Swiper('.brandSwiper', {
+                loop: true,
+                speed: 4000,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: 2,
+                centeredSlides: true,
+                allowTouchMove: false,
+                breakpoints: {
+                    640: { slidesPerView: 3 },
+                    1024: { slidesPerView: 7 },
+                }
+            });
         }
-    });
+    }
 
     // 3. Header Scroll Effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            header.classList.add('header-scrolled');
-        } else {
-            header.classList.remove('header-scrolled');
-        }
-    });
+    const header = document.querySelector('header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+    }
 
     // 4. Modern FAQ Interaction
     const faqBtns = document.querySelectorAll('.faq-btn');
-    faqBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const faqItem = btn.parentElement;
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('.fa-plus') || btn.querySelector('.fa-minus');
+    if (faqBtns.length > 0) {
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const faqItem = btn.parentElement;
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('.fa-plus') || btn.querySelector('.fa-minus');
 
-            // Close other open items
-            document.querySelectorAll('.faq-btn').forEach(otherBtn => {
-                if (otherBtn !== btn && otherBtn.getAttribute('aria-expanded') === 'true') {
-                    otherBtn.setAttribute('aria-expanded', 'false');
-                    otherBtn.nextElementSibling.style.maxHeight = '0px';
-                    if (otherBtn.querySelector('i')) {
-                        otherBtn.querySelector('i').classList.replace('fa-minus', 'fa-plus');
+                // Close other open items
+                document.querySelectorAll('.faq-btn').forEach(otherBtn => {
+                    if (otherBtn !== btn && otherBtn.getAttribute('aria-expanded') === 'true') {
+                        otherBtn.setAttribute('aria-expanded', 'false');
+                        otherBtn.nextElementSibling.style.maxHeight = '0px';
+                        if (otherBtn.querySelector('i')) {
+                            otherBtn.querySelector('i').classList.replace('fa-minus', 'fa-plus');
+                        }
                     }
+                });
+
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', !expanded);
+
+                if (!expanded) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    if (icon) icon.classList.replace('fa-plus', 'fa-minus');
+                } else {
+                    content.style.maxHeight = '0px';
+                    if (icon) icon.classList.replace('fa-minus', 'fa-plus');
                 }
             });
-
-            const expanded = btn.getAttribute('aria-expanded') === 'true';
-            btn.setAttribute('aria-expanded', !expanded);
-
-            if (!expanded) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                if (icon) icon.classList.replace('fa-plus', 'fa-minus');
-            } else {
-                content.style.maxHeight = '0px';
-                if (icon) icon.classList.replace('fa-minus', 'fa-plus');
-            }
         });
-    });
+    }
 
     // 5. Scroll Reveal Animation
     const observerOptions = {
@@ -112,18 +127,20 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, observerOptions);
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
 
-    document.querySelectorAll('section').forEach(section => {
-        section.classList.add('reveal');
-        observer.observe(section);
-    });
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('reveal');
+            observer.observe(section);
+        });
+    }
 
     // 6. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -194,73 +211,79 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayImg = document.getElementById('display-img');
     const contentLoader = document.getElementById('content-loader');
 
-    function updateContent(item) {
-        // Show loader
-        contentLoader.classList.add('opacity-100');
+    // Only run Intelligence Hub logic if the container exists
+    if (subtabsContainer && displayTitle && displayText && displayImg && contentLoader) {
+        function updateContent(item) {
+            // Show loader
+            contentLoader.classList.add('opacity-100');
 
-        // Hide content temporarily for animation
-        [displayTitle, displayText, document.getElementById('display-link-wrapper')].forEach(el => {
-            el.classList.add('opacity-0', 'translate-y-4');
-        });
-
-        setTimeout(() => {
-            displayTitle.textContent = item.title;
-            displayText.textContent = item.text;
-            displayImg.src = item.img;
-
-            // Hide loader and show content
-            contentLoader.classList.remove('opacity-100');
+            // Hide content temporarily for animation
             [displayTitle, displayText, document.getElementById('display-link-wrapper')].forEach(el => {
-                el.classList.remove('opacity-0', 'translate-y-4');
+                if (el) el.classList.add('opacity-0', 'translate-y-4');
             });
-        }, 300);
+
+            setTimeout(() => {
+                displayTitle.textContent = item.title;
+                displayText.textContent = item.text;
+                displayImg.src = item.img;
+
+                // Hide loader and show content
+                contentLoader.classList.remove('opacity-100');
+                [displayTitle, displayText, document.getElementById('display-link-wrapper')].forEach(el => {
+                    if (el) el.classList.remove('opacity-0', 'translate-y-4');
+                });
+            }, 300);
+        }
+
+        function renderSubtabs(category) {
+            subtabsContainer.innerHTML = '';
+            const items = intelligenceData[category];
+
+            items.forEach((item, index) => {
+                const btn = document.createElement('button');
+                btn.className = `sub-tab group ${index === 0 ? 'active' : ''}`;
+                btn.innerHTML = `
+                    <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-brand/10 group-hover:text-brand transition-all duration-300 shadow-sm border border-slate-100 group-[.active]:bg-brand group-[.active]:text-white">
+                        <i class="fa-solid ${item.icon}"></i>
+                    </div>
+                    <span class="font-bold flex-1 text-left">${item.sub}</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 group-[.active]:opacity-100 group-[.active]:translate-x-0"></i>
+                `;
+
+                btn.addEventListener('mouseenter', () => {
+                    document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+                    btn.classList.add('active');
+                    updateContent(item);
+                });
+
+                subtabsContainer.appendChild(btn);
+            });
+
+            // Initial content load
+            updateContent(items[0]);
+        }
+
+        // Main Tab Switching
+        const mainTabs = document.querySelectorAll('.main-tab');
+        if (mainTabs.length > 0) {
+            mainTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.main-tab').forEach(t => {
+                        t.classList.remove('active');
+                        t.classList.add('text-slate-500');
+                    });
+                    tab.classList.add('active');
+                    tab.classList.remove('text-slate-500');
+
+                    const category = tab.getAttribute('data-category');
+                    renderSubtabs(category);
+                });
+            });
+        }
+
+        // Initialize with first category
+        renderSubtabs('market');
     }
-
-    function renderSubtabs(category) {
-        subtabsContainer.innerHTML = '';
-        const items = intelligenceData[category];
-
-        items.forEach((item, index) => {
-            const btn = document.createElement('button');
-            btn.className = `sub-tab group ${index === 0 ? 'active' : ''}`;
-            btn.innerHTML = `
-                <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-brand/10 group-hover:text-brand transition-all duration-300 shadow-sm border border-slate-100 group-[.active]:bg-brand group-[.active]:text-white">
-                    <i class="fa-solid ${item.icon}"></i>
-                </div>
-                <span class="font-bold flex-1 text-left">${item.sub}</span>
-                <i class="fa-solid fa-chevron-right text-[10px] opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 group-[.active]:opacity-100 group-[.active]:translate-x-0"></i>
-            `;
-
-            btn.addEventListener('mouseenter', () => {
-                document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
-                btn.classList.add('active');
-                updateContent(item);
-            });
-
-            subtabsContainer.appendChild(btn);
-        });
-
-        // Initial content load
-        updateContent(items[0]);
-    }
-
-    // Main Tab Switching
-    document.querySelectorAll('.main-tab').forEach(tab => {
-        tab.addEventListener('click', () => {
-            document.querySelectorAll('.main-tab').forEach(t => {
-                t.classList.remove('active');
-                t.classList.add('text-slate-500');
-            });
-            tab.classList.add('active');
-            tab.classList.remove('text-slate-500');
-
-            const category = tab.getAttribute('data-category');
-            renderSubtabs(category);
-        });
-    });
-
-    // Initialize with first category
-    if (subtabsContainer) renderSubtabs('market');
 
     // 8. Scroll to Top Button
     const scrollToTopBtn = document.getElementById('scrollToTop');

@@ -72,8 +72,11 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
+        <!-- Backdrop -->
         <div id="mobileMenuBackdrop"
             class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+
+        <!-- Menu Content -->
         <div id="mobileMenuContent"
             class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
             <div class="flex items-center justify-between mb-12">
@@ -89,6 +92,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
+
             <nav class="flex-grow">
                 <ul class="space-y-6">
                     <li><a href="index.html"
@@ -106,6 +110,24 @@
                     </li>
                 </ul>
             </nav>
+
+            <div class="mt-auto pt-10 border-t border-slate-100">
+                <a href="contact.html"
+                    class="w-full bg-brand text-white py-3 rounded-2xl font-bold text-center block shadow-lg shadow-brand/20 active:scale-95 text-base">
+                    Get Started
+                </a>
+                <div class="flex items-center justify-center gap-6 mt-8">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -583,8 +605,8 @@
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTop"
-        class="cursor-pointer fixed bottom-8 right-8 w-14 h-14 bg-brand text-white rounded-2xl shadow-2xl shadow-brand/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-brand-dark hover:scale-110 active:scale-95 z-50">
-        <i class="fa-solid fa-arrow-up text-xl"></i>
+        class="cursor-pointer fixed bottom-18 right-8 w-10 h-10 bg-brand text-white rounded-lg shadow-2xl shadow-brand/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-brand-dark hover:scale-110 active:scale-95 z-50">
+        <i class="fa-solid fa-arrow-up text-lg"></i>
     </button>
 
     <!-- AOS JS -->
