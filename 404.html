@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | SetupInGCC</title>
+    <meta name="description"
+        content="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Local Tailwind v4 Compiled CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-white text-slate-900 font-sans selection:bg-brand selection:text-white flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2">
+        <div class="w-full mx-auto px-4 md:px-6">
+            <nav
+                class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-slate-200/50 px-6 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 bg-brand rounded-xl flex items-center justify-center text-white text-xl group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-2xl font-heading font-bold tracking-tight text-slate-800">
+                        Setup<span class="text-brand">InGCC</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                    <li><a href="index.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Home</a></li>
+                    <li><a href="about.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">About</a></li>
+                    <li><a href="services.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Services</a>
+                    </li>
+                    <li><a href="blog.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Blog</a></li>
+                    <li><a href="contact.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="flex items-center gap-4">
+                    <a href="contact.html"
+                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95 hover:shadow-brand/40">
+                        Get Started
+                    </a>
+                    <button id="mobileMenuBtn"
+                        class="lg:hidden w-10 h-10 flex items-center justify-center text-slate-700 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
+        <!-- Backdrop -->
+        <div id="mobileMenuBackdrop"
+            class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+
+        <!-- Menu Content -->
+        <div id="mobileMenuContent"
+            class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
+            <div class="flex items-center justify-between mb-12">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-sm">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-800">Setup<span
+                            class="text-brand">InGCC</span></span>
+                </a>
+                <button id="closeMenuBtn"
+                    class="w-10 h-10 flex items-center justify-center text-slate-500 text-xl hover:text-brand transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <nav class="flex-grow">
+                <ul class="space-y-6">
+                    <li><a href="index.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Home</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">About</a>
+                    </li>
+                    <li><a href="services.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Services</a>
+                    </li>
+                    <li><a href="blog.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Blog</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mt-auto pt-10 border-t border-slate-100">
+                <a href="contact.html"
+                    class="w-full bg-brand text-white py-3 rounded-2xl font-bold text-center block shadow-lg shadow-brand/20 active:scale-95 text-base">Get
+                    Started</a>
+                <div class="flex items-center justify-center gap-6 mt-8">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content: Simple & Modern -->
+    <main class="flex-grow flex items-center justify-center relative pt-20 mb-20">
+        <div class="container mx-auto px-4 text-center">
+
+            <div data-aos="fade-up" class="max-w-xl mx-auto">
+                <!-- Simple Large 404 -->
+                <h1 class="text-[120px] font-bold text-slate-100 leading-none select-none tracking-tighter">
+                    404
+                </h1>
+
+                <div class="-mt-12 relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">
+                        Page not found
+                    </h2>
+                    <p class="text-base text-slate-500 mb-10 leading-relaxed font-medium">
+                        Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.
+                    </p>
+
+                    <a href="index.html"
+                        class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg shadow-brand/20 hover:shadow-brand/40 hover:-translate-y-1">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Back to Home</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-20 pb-12 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 gap-10 md:mb-24">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-4 mb-10">
+                        <div
+                            class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="text-3xl font-heading font-bold tracking-tight text-white uppercase">
+                            Setup<span class="text-brand">InGCC</span>
+                        </span>
+                    </a>
+                    <p class="text-lg leading-relaxed mb-10 opacity-70">
+                        Premier global business consultancy specializing in corporate growth, strategic planning, and
+                        legal compliance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Resources</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="about.html" class="hover:text-brand transition-colors">Company Story</a></li>
+                        <li><a href="services.html" class="hover:text-brand transition-colors">Our Ecosystem</a></li>
+                        <li><a href="blog.html" class="hover:text-brand transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brand transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Specialties</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="service-details.html" class="hover:text-brand transition-colors">Business Setup</a>
+                        </li>
+                        <li><a href="#" class="hover:text-brand transition-colors">PRO Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">IP Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Legal Advisory</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Global Office</h4>
+                    <ul class="space-y-8 text-lg">
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-map-pin text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">Business Center, King Abdullah Road
+                                Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-phone-volume text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">+966 53 890 4337</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-envelope-open text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70 underline underline-offset-4">info@setupingcc.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-5 opacity-40 text-sm">
+                <p class="text-center md:text-start">&copy; 2026 SetupInGCC
+                    International. All rights reserved.</p>
+                <div class="flex gap-12">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Charter</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Operations</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop"
+        class="cursor-pointer fixed bottom-18 right-8 w-10 h-10 bg-brand text-white rounded-lg shadow-2xl shadow-brand/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-brand-dark hover:scale-110 active:scale-95 z-50">
+        <i class="fa-solid fa-arrow-up text-lg"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
