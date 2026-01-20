@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | DUVOLKS Consultants</title>
+    <title>Contact Us | SetupInGCC - Get Expert Business Consultation</title>
+    <meta name="description"
+        content="Get in touch with SetupInGCC for expert business consultation services. We're here to help you establish and grow your business in the GCC region.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +18,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Local Tailwind v4 Compiled CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -23,8 +28,8 @@
 <body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand selection:text-white">
 
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4">
-        <div class="container mx-auto px-4 md:px-6">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2">
+        <div class="w-full mx-auto px-4 md:px-6">
             <nav
                 class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-slate-200/50 px-6 py-3 flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-2 group">
@@ -33,21 +38,27 @@
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
                     <span class="text-2xl font-heading font-bold tracking-tight text-slate-800">
-                        DU<span class="text-brand">VOLKS</span>
+                        Setup<span class="text-brand">InGCC</span>
                     </span>
                 </a>
 
                 <!-- Desktop Nav -->
                 <ul class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
-                    <li><a href="index.html" class="hover:text-brand transition-all">Home</a></li>
-                    <li><a href="about.html" class="hover:text-brand transition-all">About</a></li>
-                    <li><a href="services.html" class="hover:text-brand transition-all">Services</a></li>
+                    <li><a href="index.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Home</a></li>
+                    <li><a href="about.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">About</a></li>
+                    <li><a href="services.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Services</a>
+                    </li>
+                    <li><a href="blog.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Blog</a></li>
                     <li><a href="contact.html" class="text-brand font-bold">Contact</a></li>
                 </ul>
 
                 <div class="flex items-center gap-4">
                     <a href="contact.html"
-                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95">
+                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95 hover:shadow-brand/40">
                         Get Started
                     </a>
                     <button id="mobileMenuBtn"
@@ -59,13 +70,10 @@
         </div>
     </header>
 
-    <!-- Mobile Menu Off-canvas -->
+    <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
-        <!-- Backdrop -->
         <div id="mobileMenuBackdrop"
             class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
-
-        <!-- Menu Content -->
         <div id="mobileMenuContent"
             class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
             <div class="flex items-center justify-between mb-12">
@@ -73,15 +81,14 @@
                     <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-sm">
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
-                    <span class="text-xl font-bold tracking-tight text-slate-800">DU<span
-                            class="text-brand">VOLKS</span></span>
+                    <span class="text-xl font-bold tracking-tight text-slate-800">Setup<span
+                            class="text-brand">InGCC</span></span>
                 </a>
                 <button id="closeMenuBtn"
                     class="w-10 h-10 flex items-center justify-center text-slate-500 text-xl hover:text-brand transition-colors">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-
             <nav class="flex-grow">
                 <ul class="space-y-6">
                     <li><a href="index.html"
@@ -93,156 +100,415 @@
                     <li><a href="services.html"
                             class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Services</a>
                     </li>
+                    <li><a href="blog.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Blog</a>
+                    </li>
                     <li><a href="contact.html" class="text-base font-bold text-brand block">Contact</a></li>
                 </ul>
             </nav>
-
-            <div class="mt-auto pt-10 border-t border-slate-100">
-                <a href="contact.html"
-                    class="w-full bg-brand text-white py-3 rounded-2xl font-bold text-center block shadow-lg shadow-brand/20 active:scale-95 text-base">
-                    Get Started
-                </a>
-                <div class="flex items-center justify-center gap-6 mt-8">
-                    <a href="#"
-                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"
-                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
-                            class="fa-brands fa-twitter"></i></a>
-                    <a href="#"
-                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
-                            class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
         </div>
     </div>
 
     <main>
-        <!-- Page Hero -->
-        <section class="pt-48 pb-24 bg-slate-950 text-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-brand/5 -z-0"></div>
-            <div class="container mx-auto px-4 relative z-10 text-center">
-                <h1 class="text-5xl md:text-7xl font-heading font-bold mb-8">Let's <span
-                        class="text-brand">Connect</span></h1>
-                <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">Ready to elevate your business?
-                    Reach out to our global experts today.</p>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-16 overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 -z-10">
+                <img src="./assets/images/blog/blog-1.png" class="w-full h-full object-cover" alt="Contact Us">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-brand/80"></div>
+                <div class="absolute inset-0 bg-grid-white/[0.02]"></div>
+            </div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <!-- Badge -->
+                    <span
+                        class="inline-flex items-center gap-3 bg-brand/20 backdrop-blur-sm border border-brand/30 text-brand px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6"
+                        data-aos="fade-up">
+                        <i class="fa-solid fa-headset"></i>
+                        24/7 Support Available
+                    </span>
+
+                    <!-- Title -->
+                    <h1 class="text-3xl md:text-4xl lg:text-6xl font-heading font-bold text-white leading-tight mb-6"
+                        data-aos="fade-up" data-aos-delay="100">
+                        Let's Start Your <span class="text-brand">Success Story</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="text-lg md:text-xl text-slate-200 mb-8 leading-relaxed max-w-2xl mx-auto"
+                        data-aos="fade-up" data-aos-delay="200">
+                        Have questions? We're here to help. Reach out to our expert team and let's discuss how we can
+                        support your business goals.
+                    </p>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">2,500+</div>
+                            <div class="text-sm text-slate-300">Happy Clients</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">15+</div>
+                            <div class="text-sm text-slate-300">Years Experience</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">98%</div>
+                            <div class="text-sm text-slate-300">Success Rate</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+                            <div class="text-sm text-slate-300">Support</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Contact Form & Info -->
-        <section class="py-32 bg-white relative overflow-hidden">
-            <div class="container mx-auto px-4">
-                <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100">
-                    <div class="grid lg:grid-cols-5">
-                        <!-- Contact Info sidebar -->
-                        <div class="lg:col-span-2 p-12 lg:p-16 bg-brand text-white flex flex-col justify-between">
-                            <div>
-                                <h2 class="text-4xl font-bold mb-10">Global HQ</h2>
-                                <div class="space-y-10">
-                                    <div class="flex gap-6">
-                                        <div
-                                            class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl shrink-0">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                        </div>
-                                        <div>
-                                            <p
-                                                class="text-brand-light font-bold uppercase tracking-widest text-xs mb-2">
-                                                Address</p>
-                                            <p class="text-xl">Level 42, Burj Khalifa District, Dubai, UAE</p>
-                                        </div>
+        <!-- Contact Section -->
+        <section class="py-20 bg-white relative">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                    <!-- Contact Information -->
+                    <div class="lg:sticky lg:top-32" data-aos="fade-right">
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">
+                            Get in Touch
+                        </h2>
+                        <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                            We're always ready to help you with your business needs. Choose your preferred way to reach
+                            us.
+                        </p>
+
+                        <!-- Contact Cards -->
+                        <div class="space-y-6 mb-10">
+                            <!-- Phone -->
+                            <div
+                                class="group bg-gradient-to-br from-slate-50 to-white border-2 border-slate-100 hover:border-brand/30 rounded-2xl p-6 transition-all hover:shadow-xl">
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="shrink-0 w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl group-hover:bg-brand group-hover:text-white transition-all">
+                                        <i class="fa-solid fa-phone"></i>
                                     </div>
-                                    <div class="flex gap-6">
-                                        <div
-                                            class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl shrink-0">
-                                            <i class="fa-solid fa-phone-volume"></i>
-                                        </div>
-                                        <div>
-                                            <p
-                                                class="text-brand-light font-bold uppercase tracking-widest text-xs mb-2">
-                                                Phone</p>
-                                            <p class="text-xl">+971 4 800 VOLKS</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-6">
-                                        <div
-                                            class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl shrink-0">
-                                            <i class="fa-solid fa-envelope-open"></i>
-                                        </div>
-                                        <div>
-                                            <p
-                                                class="text-brand-light font-bold uppercase tracking-widest text-xs mb-2">
-                                                Email</p>
-                                            <p class="text-xl">hello@duvolks.com</p>
-                                        </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Phone</h3>
+                                        <p class="text-slate-600 mb-3">Mon-Fri from 8am to 6pm</p>
+                                        <a href="tel:+966538904337"
+                                            class="text-brand font-bold text-lg hover:underline">
+                                            +966 53 890 4337
+                                        </a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="mt-20">
-                                <p class="mb-6 opacity-60">Follow our journey</p>
-                                <div class="flex gap-4">
-                                    <a href="#"
-                                        class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-white hover:text-brand transition-all"><i
-                                            class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#"
-                                        class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-white hover:text-brand transition-all"><i
-                                            class="fa-brands fa-twitter"></i></a>
-                                    <a href="#"
-                                        class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center hover:bg-white hover:text-brand transition-all"><i
-                                            class="fa-brands fa-instagram"></i></a>
+                            <!-- Email -->
+                            <div
+                                class="group bg-gradient-to-br from-slate-50 to-white border-2 border-slate-100 hover:border-brand/30 rounded-2xl p-6 transition-all hover:shadow-xl">
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="shrink-0 w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl group-hover:bg-brand group-hover:text-white transition-all">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Email</h3>
+                                        <p class="text-slate-600 mb-3">We'll respond within 24 hours</p>
+                                        <a href="mailto:info@setupingcc.com"
+                                            class="text-brand font-bold text-lg hover:underline">
+                                            info@setupingcc.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Office -->
+                            <div
+                                class="group bg-gradient-to-br from-slate-50 to-white border-2 border-slate-100 hover:border-brand/30 rounded-2xl p-6 transition-all hover:shadow-xl">
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="shrink-0 w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl group-hover:bg-brand group-hover:text-white transition-all">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Office</h3>
+                                        <p class="text-slate-600 mb-3">Visit us at our headquarters</p>
+                                        <p class="text-slate-700 font-semibold">
+                                            Business Center, King Abdullah Road<br>
+                                            Riyadh, Saudi Arabia
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- WhatsApp -->
+                            <div
+                                class="group bg-gradient-to-br from-emerald-50 to-white border-2 border-emerald-100 hover:border-emerald-500/30 rounded-2xl p-6 transition-all hover:shadow-xl">
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="shrink-0 w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-600 text-2xl group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">WhatsApp</h3>
+                                        <p class="text-slate-600 mb-3">Chat with us instantly</p>
+                                        <a href="https://wa.me/966538904337" target="_blank"
+                                            class="text-emerald-600 font-bold text-lg hover:underline">
+                                            Start Chat
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Form area -->
-                        <div class="lg:col-span-3 p-12 lg:p-16">
-                            <h2 class="text-4xl font-bold text-slate-900 mb-10">Send a Message</h2>
-                            <form action="#" class="space-y-8">
-                                <div class="grid md:grid-cols-2 gap-8">
-                                    <div class="space-y-3">
-                                        <label class="font-bold text-slate-700">Full Name</label>
-                                        <input type="text" placeholder="John Doe"
-                                            class="w-full px-8 py-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-brand transition-all">
-                                    </div>
-                                    <div class="space-y-3">
-                                        <label class="font-bold text-slate-700">Office Email</label>
-                                        <input type="email" placeholder="john@company.com"
-                                            class="w-full px-8 py-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-brand transition-all">
-                                    </div>
+                        <!-- Social Media -->
+                        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                            <h3 class="text-xl font-bold text-slate-900 mb-6">Follow Us</h3>
+                            <div class="flex gap-4">
+                                <a href="#"
+                                    class="w-12 h-12 bg-white border-2 border-slate-200 hover:border-brand hover:bg-brand hover:text-white rounded-xl flex items-center justify-center transition-all text-slate-600 text-lg">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-12 h-12 bg-white border-2 border-slate-200 hover:border-brand hover:bg-brand hover:text-white rounded-xl flex items-center justify-center transition-all text-slate-600 text-lg">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-12 h-12 bg-white border-2 border-slate-200 hover:border-brand hover:bg-brand hover:text-white rounded-xl flex items-center justify-center transition-all text-slate-600 text-lg">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-12 h-12 bg-white border-2 border-slate-200 hover:border-brand hover:bg-brand hover:text-white rounded-xl flex items-center justify-center transition-all text-slate-600 text-lg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div data-aos="fade-left">
+                        <div
+                            class="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-3xl p-8 md:p-10 shadow-xl">
+                            <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Send us a Message</h3>
+                            <p class="text-slate-600 mb-8">Fill out the form below and we'll get back to you as soon as
+                                possible.</p>
+
+                            <form id="contactForm" class="space-y-6">
+                                <!-- Name -->
+                                <div>
+                                    <label for="name" class="block text-sm font-bold text-slate-700 mb-2">
+                                        Full Name <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full px-5 py-4 bg-white border-2 border-slate-200 rounded-xl focus:outline-none focus:border-brand transition-all text-slate-900 placeholder:text-slate-400"
+                                        placeholder="John Doe">
                                 </div>
-                                <div class="space-y-3">
-                                    <label class="font-bold text-slate-700">Inquiry Type</label>
-                                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                        <label class="cursor-pointer">
-                                            <input type="radio" name="type" class="hidden peer" checked>
-                                            <div
-                                                class="p-4 text-center border border-slate-200 rounded-2xl peer-checked:bg-brand peer-checked:text-white peer-checked:border-brand transition-all font-bold">
-                                                Business Setup</div>
-                                        </label>
-                                        <label class="cursor-pointer">
-                                            <input type="radio" name="type" class="hidden peer">
-                                            <div
-                                                class="p-4 text-center border border-slate-200 rounded-2xl peer-checked:bg-brand peer-checked:text-white peer-checked:border-brand transition-all font-bold">
-                                                Golden Visa</div>
-                                        </label>
-                                        <label class="cursor-pointer">
-                                            <input type="radio" name="type" class="hidden peer">
-                                            <div
-                                                class="p-4 text-center border border-slate-200 rounded-2xl peer-checked:bg-brand peer-checked:text-white peer-checked:border-brand transition-all font-bold">
-                                                Strategy</div>
-                                        </label>
-                                    </div>
+
+                                <!-- Email -->
+                                <div>
+                                    <label for="email" class="block text-sm font-bold text-slate-700 mb-2">
+                                        Email Address <span class="text-red-500">*</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-5 py-4 bg-white border-2 border-slate-200 rounded-xl focus:outline-none focus:border-brand transition-all text-slate-900 placeholder:text-slate-400"
+                                        placeholder="john@example.com">
                                 </div>
-                                <div class="space-y-3">
-                                    <label class="font-bold text-slate-700">Project Details</label>
-                                    <textarea rows="5" placeholder="Tell us about your goals..."
-                                        class="w-full px-8 py-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-brand transition-all"></textarea>
+
+                                <!-- Phone -->
+                                <div>
+                                    <label for="phone" class="block text-sm font-bold text-slate-700 mb-2">
+                                        Phone Number
+                                    </label>
+                                    <input type="tel" id="phone" name="phone"
+                                        class="w-full px-5 py-4 bg-white border-2 border-slate-200 rounded-xl focus:outline-none focus:border-brand transition-all text-slate-900 placeholder:text-slate-400"
+                                        placeholder="+966 XX XXX XXXX">
                                 </div>
+
+                                <!-- Service Interest -->
+                                <div>
+                                    <label for="service" class="block text-sm font-bold text-slate-700 mb-2">
+                                        Service Interest <span class="text-red-500">*</span>
+                                    </label>
+                                    <select id="service" name="service" required
+                                        class="w-full px-5 py-4 bg-white border-2 border-slate-200 rounded-xl focus:outline-none focus:border-brand transition-all text-slate-900">
+                                        <option value="">Select a service</option>
+                                        <option value="business-setup">Business Setup</option>
+                                        <option value="pro-services">PRO/GRO Services</option>
+                                        <option value="ip-services">IP Services</option>
+                                        <option value="management-advisory">Management Advisory</option>
+                                        <option value="financial-legal">Financial & Legal</option>
+                                        <option value="enhancement">Enhancement Services</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <!-- Message -->
+                                <div>
+                                    <label for="message" class="block text-sm font-bold text-slate-700 mb-2">
+                                        Message <span class="text-red-500">*</span>
+                                    </label>
+                                    <textarea id="message" name="message" rows="5" required
+                                        class="w-full px-5 py-4 bg-white border-2 border-slate-200 rounded-xl focus:outline-none focus:border-brand transition-all text-slate-900 placeholder:text-slate-400 resize-none"
+                                        placeholder="Tell us about your project or inquiry..."></textarea>
+                                </div>
+
+                                <!-- Privacy Policy -->
+                                <div class="flex items-start gap-3">
+                                    <input type="checkbox" id="privacy" name="privacy" required
+                                        class="mt-1 w-5 h-5 text-brand border-2 border-slate-300 rounded focus:ring-brand focus:ring-2">
+                                    <label for="privacy" class="text-sm text-slate-600">
+                                        I agree to the <a href="#"
+                                            class="text-brand font-semibold hover:underline">Privacy Policy</a> and <a
+                                            href="#" class="text-brand font-semibold hover:underline">Terms of
+                                            Service</a>
+                                    </label>
+                                </div>
+
+                                <!-- Submit Button -->
                                 <button type="submit"
-                                    class="w-full bg-brand hover:bg-brand-dark text-white px-10 py-6 rounded-[2rem] font-bold text-xl transition-all shadow-2xl shadow-brand/20 active:scale-[0.98]">
-                                    Initialize Consultation <i class="fa-solid fa-paper-plane ml-3"></i>
+                                    class="w-full bg-brand hover:bg-emerald-600 text-white px-8 py-5 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-brand/30 active:scale-95 flex items-center justify-center gap-3 group">
+                                    <span>Send Message</span>
+                                    <i
+                                        class="fa-solid fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
                                 </button>
                             </form>
+
+                            <!-- Success Message (Hidden by default) -->
+                            <div id="successMessage"
+                                class="hidden mt-6 bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-6">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white text-xl">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-emerald-900 mb-1">Message Sent Successfully!</h4>
+                                        <p class="text-sm text-emerald-700">We'll get back to you within 24 hours.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">
+                        Visit Our Office
+                    </h2>
+                    <p class="text-lg text-slate-600">
+                        Find us at our headquarters in Riyadh, Saudi Arabia
+                    </p>
+                </div>
+
+                <!-- Map Container -->
+                <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white" data-aos="zoom-in">
+                    <div class="relative w-full h-[400px] md:h-[500px] bg-slate-200">
+                        <!-- Placeholder for Google Maps -->
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
+                            <div class="text-center">
+                                <div
+                                    class="w-20 h-20 bg-brand/10 rounded-full flex items-center justify-center text-brand text-4xl mx-auto mb-4">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </div>
+                                <p class="text-slate-600 font-semibold text-lg">Google Maps Integration</p>
+                                <p class="text-slate-500 text-sm mt-2">Business Center, King Abdullah Road, Riyadh</p>
+                            </div>
+                        </div>
+                        <!-- Replace the above div with actual Google Maps iframe when ready -->
+                        <!-- <iframe src="YOUR_GOOGLE_MAPS_EMBED_URL" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+                    </div>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 text-center" data-aos="fade-up">
+                        <div
+                            class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Office Hours</h3>
+                        <p class="text-slate-600">Mon - Fri: 8:00 AM - 6:00 PM</p>
+                        <p class="text-slate-600">Sat: 9:00 AM - 2:00 PM</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 text-center" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div
+                            class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Support Hours</h3>
+                        <p class="text-slate-600">24/7 Emergency Support</p>
+                        <p class="text-slate-600">Always Available</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 text-center" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div
+                            class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Appointments</h3>
+                        <p class="text-slate-600">Book a consultation</p>
+                        <a href="#" class="text-brand font-semibold hover:underline">Schedule Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <span class="text-brand font-bold tracking-wider uppercase text-sm mb-4 inline-block">FAQ</span>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">
+                            Common Questions
+                        </h2>
+                        <p class="text-lg text-slate-600">
+                            Quick answers to questions you may have
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-slate-50 rounded-2xl p-6 hover:bg-slate-100 transition-all" data-aos="fade-up">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">How quickly can you respond to my inquiry?
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                We typically respond to all inquiries within 24 hours during business days. For urgent
+                                matters, please call us directly or use our WhatsApp chat for immediate assistance.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-2xl p-6 hover:bg-slate-100 transition-all" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Do you offer free consultations?</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                Yes! We offer a complimentary initial consultation to understand your business needs and
+                                discuss how we can help you achieve your goals.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-2xl p-6 hover:bg-slate-100 transition-all" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Can I visit your office without an
+                                appointment?</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                While walk-ins are welcome, we recommend scheduling an appointment to ensure one of our
+                                experts is available to give you their full attention.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-2xl p-6 hover:bg-slate-100 transition-all" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">What languages do you support?</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                Our team is multilingual and can assist you in English, Arabic, and several other
+                                languages to ensure clear communication.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -250,13 +516,126 @@
         </section>
     </main>
 
-    <footer class="bg-slate-950 text-slate-300 pt-32 pb-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2026 DUVOLKS International. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-20 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 gap-10 md:mb-24">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-4 mb-10">
+                        <div
+                            class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="text-3xl font-heading font-bold tracking-tight text-white uppercase">
+                            Setup<span class="text-brand">InGCC</span>
+                        </span>
+                    </a>
+                    <p class="text-lg leading-relaxed mb-10 opacity-70">
+                        Premier global business consultancy specializing in corporate growth, strategic planning, and
+                        legal compliance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Resources</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="about.html" class="hover:text-brand transition-colors">Company Story</a></li>
+                        <li><a href="services.html" class="hover:text-brand transition-colors">Our Services</a></li>
+                        <li><a href="blog.html" class="hover:text-brand transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brand transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Services</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="service-details.html" class="hover:text-brand transition-colors">Business Setup</a>
+                        </li>
+                        <li><a href="#" class="hover:text-brand transition-colors">PRO Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">IP Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Legal Advisory</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Global Office</h4>
+                    <ul class="space-y-8 text-lg">
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-map-pin text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">Business Center, King Abdullah Road Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-phone-volume text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">+966 53 890 4337</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-envelope-open text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70 underline underline-offset-4">info@setupingcc.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-5 opacity-40 text-sm">
+                <p class="text-center md:text-start">&copy; 2026 SetupInGCC International. All rights reserved.</p>
+                <div class="flex gap-12">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Charter</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Operations</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop"
+        class="cursor-pointer fixed bottom-8 right-8 w-14 h-14 bg-brand text-white rounded-2xl shadow-2xl shadow-brand/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-brand-dark hover:scale-110 active:scale-95 z-50">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
     <script src="./js/main.js"></script>
+
+    <!-- Contact Form Handler -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // Here you would typically send the data to your backend
+            console.log('Form submitted:', data);
+
+            // Show success message
+            document.getElementById('successMessage').classList.remove('hidden');
+
+            // Reset form
+            this.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.add('hidden');
+            }, 5000);
+        });
+    </script>
 </body>
 
 </html>

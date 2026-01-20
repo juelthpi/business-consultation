@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Setup Services | SetupInGCC</title>
+    <meta name="description"
+        content="Comprehensive business setup services in Dubai and GCC. We simplify the process of establishing your business with full compliance and expert guidance.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Local Tailwind v4 Compiled CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2">
+        <div class="w-full mx-auto px-4 md:px-6">
+            <nav
+                class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-slate-200/50 px-6 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 bg-brand rounded-xl flex items-center justify-center text-white text-xl group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-2xl font-heading font-bold tracking-tight text-slate-800">
+                        Setup<span class="text-brand">InGCC</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                    <li><a href="index.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Home</a></li>
+                    <li><a href="about.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">About</a></li>
+                    <li><a href="services.html" class="text-brand font-bold">Services</a></li>
+                    <li><a href="blog.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Blog</a></li>
+                    <li><a href="contact.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="flex items-center gap-4">
+                    <a href="contact.html"
+                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95 hover:shadow-brand/40">
+                        Get Started
+                    </a>
+                    <button id="mobileMenuBtn"
+                        class="lg:hidden w-10 h-10 flex items-center justify-center text-slate-700 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
+        <div id="mobileMenuBackdrop"
+            class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+        <div id="mobileMenuContent"
+            class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
+            <div class="flex items-center justify-between mb-12">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-sm">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-800">Setup<span
+                            class="text-brand">InGCC</span></span>
+                </a>
+                <button id="closeMenuBtn"
+                    class="w-10 h-10 flex items-center justify-center text-slate-500 text-xl hover:text-brand transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="flex-grow">
+                <ul class="space-y-6">
+                    <li><a href="index.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Home</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">About</a>
+                    </li>
+                    <li><a href="services.html" class="text-base font-bold text-brand block">Services</a></li>
+                    <li><a href="blog.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Blog</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-brand">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-grid-white/[0.02] -z-10"></div>
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-brand/20 blur-[120px] -z-10"></div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <!-- Breadcrumb -->
+                <nav class="flex items-center gap-2 text-sm mb-8 text-slate-300" data-aos="fade-up">
+                    <a href="index.html" class="hover:text-brand transition-colors">Home</a>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <a href="services.html" class="hover:text-brand transition-colors">Services</a>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <span class="text-brand">Business Setup</span>
+                </nav>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <!-- Service Badge -->
+                        <span
+                            class="inline-flex items-center gap-3 bg-brand/20 backdrop-blur-sm border border-brand/30 text-brand px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6"
+                            data-aos="fade-up">
+                            <i class="fa-solid fa-rocket"></i>
+                            Professional Service
+                        </span>
+
+                        <!-- Title -->
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight mb-6"
+                            data-aos="fade-up" data-aos-delay="100">
+                            Business Setup Services
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="text-lg text-slate-200 mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                            Launch your business in Dubai and the GCC with confidence. We handle everything from company
+                            registration to licensing, ensuring full compliance and a smooth setup process.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="300">
+                            <a href="contact.html"
+                                class="bg-brand hover:bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold transition-all shadow-2xl shadow-brand/30 active:scale-95">
+                                Get Started Now
+                            </a>
+                            <a href="#overview"
+                                class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-bold transition-all border border-white/20">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Image -->
+                    <div class="relative" data-aos="fade-left" data-aos-delay="400">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="./assets/images/hero/hero-1.png" class="w-full h-[400px] object-cover"
+                                alt="Business Setup">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand/40 to-transparent"></div>
+                        </div>
+                        <!-- Floating Stats -->
+                        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-2xl">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-building text-brand text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-3xl font-bold text-slate-900">2,500+</p>
+                                    <p class="text-sm text-slate-500">Companies Established</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Overview -->
+        <section id="overview" class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <span class="text-brand font-bold tracking-wider uppercase text-sm mb-4 inline-block">What We
+                            Offer</span>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">
+                            Complete Business Setup Solutions
+                        </h2>
+                        <p class="text-lg text-slate-600 leading-relaxed">
+                            From initial consultation to final licensing, we provide end-to-end support for establishing
+                            your business in the GCC region.
+                        </p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="grid md:grid-cols-2 gap-8 mb-16">
+                        <div class="flex gap-4" data-aos="fade-up">
+                            <div class="shrink-0">
+                                <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-check text-brand text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Fast Processing</h3>
+                                <p class="text-slate-600 leading-relaxed">Complete your business setup in as little as
+                                    3-5 business days with our streamlined process.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="shrink-0">
+                                <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-shield-halved text-brand text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">100% Compliance</h3>
+                                <p class="text-slate-600 leading-relaxed">Ensure full regulatory compliance with local
+                                    laws and international standards.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="shrink-0">
+                                <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-users text-brand text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Expert Guidance</h3>
+                                <p class="text-slate-600 leading-relaxed">Work with experienced consultants who
+                                    understand the local business landscape.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="shrink-0">
+                                <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-dollar-sign text-brand text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Cost-Effective</h3>
+                                <p class="text-slate-600 leading-relaxed">Transparent pricing with no hidden fees. Get
+                                    the best value for your investment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setup Process -->
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-brand font-bold tracking-wider uppercase text-sm mb-4 inline-block">How It
+                        Works</span>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">
+                        Our Setup Process
+                    </h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                        A simple, transparent 5-step process to get your business up and running
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="relative mb-12" data-aos="fade-right">
+                        <div class="flex flex-col md:flex-row gap-8 items-start">
+                            <div class="shrink-0">
+                                <div
+                                    class="w-20 h-20 bg-brand text-white rounded-2xl flex items-center justify-center text-3xl font-bold shadow-xl shadow-brand/30">
+                                    01
+                                </div>
+                            </div>
+                            <div
+                                class="flex-1 bg-white rounded-2xl p-8 border border-slate-200 hover:border-brand/30 hover:shadow-xl transition-all">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-4">Initial Consultation</h3>
+                                <p class="text-slate-600 leading-relaxed mb-4">
+                                    We start with a comprehensive consultation to understand your business goals,
+                                    industry requirements, and specific needs. Our experts will guide you through the
+                                    available options for business structures and jurisdictions.
+                                </p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Business activity selection
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Jurisdiction recommendation
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Cost estimation
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative mb-12" data-aos="fade-left">
+                        <div class="flex flex-col md:flex-row gap-8 items-start">
+                            <div class="shrink-0 md:order-2">
+                                <div
+                                    class="w-20 h-20 bg-brand text-white rounded-2xl flex items-center justify-center text-3xl font-bold shadow-xl shadow-brand/30">
+                                    02
+                                </div>
+                            </div>
+                            <div
+                                class="flex-1 bg-white rounded-2xl p-8 border border-slate-200 hover:border-brand/30 hover:shadow-xl transition-all md:order-1">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-4">Documentation & Preparation</h3>
+                                <p class="text-slate-600 leading-relaxed mb-4">
+                                    Our team will prepare all necessary documentation and guide you through the
+                                    paperwork requirements. We ensure everything is accurate and compliant with local
+                                    regulations.
+                                </p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Document collection & verification
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Trade name reservation
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        MOA & AOA preparation
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative mb-12" data-aos="fade-right">
+                        <div class="flex flex-col md:flex-row gap-8 items-start">
+                            <div class="shrink-0">
+                                <div
+                                    class="w-20 h-20 bg-brand text-white rounded-2xl flex items-center justify-center text-3xl font-bold shadow-xl shadow-brand/30">
+                                    03
+                                </div>
+                            </div>
+                            <div
+                                class="flex-1 bg-white rounded-2xl p-8 border border-slate-200 hover:border-brand/30 hover:shadow-xl transition-all">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-4">License Application</h3>
+                                <p class="text-slate-600 leading-relaxed mb-4">
+                                    We submit your application to the relevant authorities and follow up on the approval
+                                    process. Our established relationships ensure faster processing times.
+                                </p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Initial approval application
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        External approvals (if required)
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        License issuance
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative mb-12" data-aos="fade-left">
+                        <div class="flex flex-col md:flex-row gap-8 items-start">
+                            <div class="shrink-0 md:order-2">
+                                <div
+                                    class="w-20 h-20 bg-brand text-white rounded-2xl flex items-center justify-center text-3xl font-bold shadow-xl shadow-brand/30">
+                                    04
+                                </div>
+                            </div>
+                            <div
+                                class="flex-1 bg-white rounded-2xl p-8 border border-slate-200 hover:border-brand/30 hover:shadow-xl transition-all md:order-1">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-4">Office Setup & Visa Processing</h3>
+                                <p class="text-slate-600 leading-relaxed mb-4">
+                                    We assist with office space solutions and handle all visa applications for you and
+                                    your employees, ensuring a smooth relocation process.
+                                </p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Office space arrangement
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Visa application & processing
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Emirates ID registration
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="relative" data-aos="fade-right">
+                        <div class="flex flex-col md:flex-row gap-8 items-start">
+                            <div class="shrink-0">
+                                <div
+                                    class="w-20 h-20 bg-brand text-white rounded-2xl flex items-center justify-center text-3xl font-bold shadow-xl shadow-brand/30">
+                                    05
+                                </div>
+                            </div>
+                            <div
+                                class="flex-1 bg-white rounded-2xl p-8 border border-slate-200 hover:border-brand/30 hover:shadow-xl transition-all">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-4">Launch & Ongoing Support</h3>
+                                <p class="text-slate-600 leading-relaxed mb-4">
+                                    Once everything is in place, we help you launch your business and provide ongoing
+                                    support for compliance, renewals, and growth.
+                                </p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Bank account opening assistance
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        PRO services setup
+                                    </li>
+                                    <li class="flex items-center gap-2 text-slate-600">
+                                        <i class="fa-solid fa-circle-check text-brand"></i>
+                                        Continuous compliance support
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Structure Options -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-brand font-bold tracking-wider uppercase text-sm mb-4 inline-block">Choose Your
+                        Structure</span>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">
+                        Business Structure Options
+                    </h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                        Select the right business structure that aligns with your goals and operational needs
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Mainland -->
+                    <div class="group bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-100 hover:border-brand/30 hover:shadow-2xl transition-all"
+                        data-aos="zoom-in">
+                        <div
+                            class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-3xl mb-6 group-hover:bg-brand group-hover:text-white transition-all">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Mainland Company</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Trade directly with the UAE market and internationally. Ideal for businesses targeting local
+                            customers.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span>100% foreign ownership available</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span>No restrictions on trading</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span>Physical office required</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="block w-full text-center bg-slate-100 hover:bg-brand hover:text-white text-slate-900 py-3 rounded-xl font-bold transition-all">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <!-- Free Zone -->
+                    <div class="group bg-gradient-to-br from-brand/5 to-white rounded-2xl p-8 border-2 border-brand/30 hover:shadow-2xl transition-all relative overflow-hidden"
+                        data-aos="zoom-in" data-aos-delay="100">
+                        <div
+                            class="absolute top-4 right-4 bg-brand text-white px-3 py-1 rounded-full text-xs font-bold">
+                            Popular
+                        </div>
+                        <div
+                            class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-3xl mb-6 group-hover:bg-brand group-hover:text-white transition-all">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Free Zone Company</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Enjoy tax benefits and 100% ownership. Perfect for international business operations.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span>0% corporate & income tax</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span>100% profit repatriation</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span>Flexible office options</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="block w-full text-center bg-brand hover:bg-emerald-600 text-white py-3 rounded-xl font-bold transition-all shadow-lg">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <!-- Offshore -->
+                    <div class="group bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border-2 border-slate-100 hover:border-brand/30 hover:shadow-2xl transition-all"
+                        data-aos="zoom-in" data-aos-delay="200">
+                        <div
+                            class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-3xl mb-6 group-hover:bg-brand group-hover:text-white transition-all">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Offshore Company</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Asset protection and international trading. Cannot conduct business within the UAE.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span>Complete confidentiality</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span>Asset protection</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span>No physical office needed</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="block w-full text-center bg-slate-100 hover:bg-brand hover:text-white text-slate-900 py-3 rounded-xl font-bold transition-all">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-brand font-bold tracking-wider uppercase text-sm mb-4 inline-block">Transparent
+                        Pricing</span>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">
+                        Investment Packages
+                    </h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                        Choose a package that fits your business needs. All packages include expert consultation and
+                        support.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Starter Package -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 hover:shadow-xl transition-all"
+                        data-aos="fade-up">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Starter</h3>
+                        <p class="text-slate-500 mb-6">Perfect for small businesses</p>
+                        <div class="mb-8">
+                            <span class="text-4xl font-bold text-slate-900">$2,999</span>
+                            <span class="text-slate-500">/setup</span>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span class="text-slate-600">Company registration</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span class="text-slate-600">Trade license</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span class="text-slate-600">1 visa allocation</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span class="text-slate-600">Basic PRO services</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="block w-full text-center bg-slate-100 hover:bg-brand hover:text-white text-slate-900 py-3 rounded-xl font-bold transition-all">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Professional Package -->
+                    <div class="bg-gradient-to-br from-brand to-emerald-600 rounded-2xl p-8 text-white relative overflow-hidden shadow-2xl transform scale-105"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="absolute top-4 right-4 bg-white text-brand px-3 py-1 rounded-full text-xs font-bold">
+                            Recommended
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <p class="text-white/80 mb-6">Most popular choice</p>
+                        <div class="mb-8">
+                            <span class="text-4xl font-bold">$5,999</span>
+                            <span class="text-white/80">/setup</span>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <span>Everything in Starter</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <span>3 visa allocations</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <span>Bank account assistance</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <span>Office space consultation</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check mt-1"></i>
+                                <span>Priority support</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="block w-full text-center bg-white text-brand py-3 rounded-xl font-bold hover:bg-slate-100 transition-all">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Enterprise Package -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 hover:shadow-xl transition-all"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Enterprise</h3>
+                        <p class="text-slate-500 mb-6">For large organizations</p>
+                        <div class="mb-8">
+                            <span class="text-4xl font-bold text-slate-900">Custom</span>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span class="text-slate-600">Everything in Professional</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span class="text-slate-600">Unlimited visas</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span class="text-slate-600">Dedicated account manager</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span class="text-slate-600">Custom solutions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand mt-1"></i>
+                                <span class="text-slate-600">24/7 premium support</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="block w-full text-center bg-slate-100 hover:bg-brand hover:text-white text-slate-900 py-3 rounded-xl font-bold transition-all">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16" data-aos="fade-up">
+                        <span class="text-brand font-bold tracking-wider uppercase text-sm mb-4 inline-block">Got
+                            Questions?</span>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">
+                            Frequently Asked Questions
+                        </h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-slate-50 rounded-2xl p-6 hover:bg-slate-100 transition-all" data-aos="fade-up">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">How long does the setup process take?</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                The typical business setup process takes 3-5 business days for free zone companies and
+                                5-7 days for mainland companies, depending on the business activity and documentation
+                                readiness.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-2xl p-6 hover:bg-slate-100 transition-all" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Do I need to be present in Dubai?</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                While physical presence is required for certain steps like visa stamping and Emirates ID
+                                registration, we can handle most of the process remotely. We'll guide you on when your
+                                presence is necessary.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-2xl p-6 hover:bg-slate-100 transition-all" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">What documents do I need?</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                Basic requirements include passport copies, visa copies (if applicable), business plan,
+                                and proof of address. Specific requirements vary based on business activity and
+                                structure. We'll provide a complete checklist during consultation.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-2xl p-6 hover:bg-slate-100 transition-all" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Can I change my business activity later?
+                            </h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                Yes, you can add or modify business activities during license renewal or through an
+                                amendment process. We can assist with activity amendments at any time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-brand relative overflow-hidden mx-4 md:mx-6 mb-12 rounded-2xl">
+            <div class="absolute inset-0 bg-[url('./assets/images/bg/carbon-fibre.png')] opacity-10"></div>
+            <div class="container mx-auto px-10 relative z-10 text-center py-12">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6 leading-tight"
+                    data-aos="fade-up">
+                    Ready to Start Your Business Journey?
+                </h2>
+                <p class="text-white/90 text-xl leading-relaxed mb-8 max-w-2xl mx-auto" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Get a free consultation with our business setup experts and discover the best path for your venture.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="contact.html"
+                        class="bg-white text-brand px-12 py-4 rounded-2xl font-bold text-lg hover:bg-slate-100 transition-all shadow-2xl active:scale-95">
+                        Schedule Consultation
+                    </a>
+                    <a href="tel:+966538904337"
+                        class="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-12 py-4 rounded-2xl font-bold text-lg hover:bg-white/20 transition-all">
+                        <i class="fa-solid fa-phone mr-2"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-20 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 gap-10 md:mb-24">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-4 mb-10">
+                        <div
+                            class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="text-3xl font-heading font-bold tracking-tight text-white uppercase">
+                            Setup<span class="text-brand">InGCC</span>
+                        </span>
+                    </a>
+                    <p class="text-lg leading-relaxed mb-10 opacity-70">
+                        Premier global business consultancy specializing in corporate growth, strategic planning, and
+                        legal compliance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Resources</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="about.html" class="hover:text-brand transition-colors">Company Story</a></li>
+                        <li><a href="services.html" class="hover:text-brand transition-colors">Our Services</a></li>
+                        <li><a href="blog.html" class="hover:text-brand transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brand transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Services</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="#" class="hover:text-brand transition-colors">Business Setup</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">PRO Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">IP Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Legal Advisory</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Global Office</h4>
+                    <ul class="space-y-8 text-lg">
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-map-pin text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">Business Center, King Abdullah Road Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-phone-volume text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">+966 53 890 4337</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-envelope-open text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70 underline underline-offset-4">info@setupingcc.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-5 opacity-40 text-sm">
+                <p class="text-center md:text-start">&copy; 2026 SetupInGCC International. All rights reserved.</p>
+                <div class="flex gap-12">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Charter</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Operations</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop"
+        class="cursor-pointer fixed bottom-8 right-8 w-14 h-14 bg-brand text-white rounded-2xl shadow-2xl shadow-brand/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-brand-dark hover:scale-110 active:scale-95 z-50">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Charter | SetupInGCC</title>
+    <meta name="description"
+        content="Read our Privacy Charter to understand how SetupInGCC collects, uses, and protects your personal information.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Local Tailwind v4 Compiled CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2">
+        <div class="w-full mx-auto px-4 md:px-6">
+            <nav
+                class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-slate-200/50 px-6 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 bg-brand rounded-xl flex items-center justify-center text-white text-xl group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-2xl font-heading font-bold tracking-tight text-slate-800">
+                        Setup<span class="text-brand">InGCC</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                    <li><a href="index.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Home</a></li>
+                    <li><a href="about.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">About</a></li>
+                    <li><a href="services.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Services</a>
+                    </li>
+                    <li><a href="blog.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Blog</a></li>
+                    <li><a href="contact.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="flex items-center gap-4">
+                    <a href="contact.html"
+                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95 hover:shadow-brand/40">
+                        Get Started
+                    </a>
+                    <button id="mobileMenuBtn"
+                        class="lg:hidden w-10 h-10 flex items-center justify-center text-slate-700 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
+        <div id="mobileMenuBackdrop"
+            class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+        <div id="mobileMenuContent"
+            class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
+            <div class="flex items-center justify-between mb-12">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-sm">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-800">Setup<span
+                            class="text-brand">InGCC</span></span>
+                </a>
+                <button id="closeMenuBtn"
+                    class="w-10 h-10 flex items-center justify-center text-slate-500 text-xl hover:text-brand transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="flex-grow">
+                <ul class="space-y-6">
+                    <li><a href="index.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Home</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">About</a>
+                    </li>
+                    <li><a href="services.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Services</a>
+                    </li>
+                    <li><a href="blog.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Blog</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Hero -->
+        <!-- Page Hero -->
+        <section class="relative pt-32 pb-16 overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 -z-10">
+                <img src="./assets/images/blog/blog-1.png" class="w-full h-full object-cover" alt="Privacy Hero">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-brand/80"></div>
+                <div class="absolute inset-0 bg-grid-white/[0.02]"></div>
+            </div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="max-w-3xl">
+                    <span class="text-brand font-bold tracking-wider uppercase text-sm mb-3 block"
+                        data-aos="fade-up">Legal Information</span>
+                    <h1 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6" data-aos="fade-up"
+                        data-aos-delay="100">
+                        Privacy Charter
+                    </h1>
+                    <p class="text-lg text-slate-200 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                        Last updated: January 21, 2026
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Navigation for legal pages -->
+                    <div class="flex gap-4 mb-12 border-b border-slate-100 pb-4">
+                        <a href="privacy.html"
+                            class="text-brand font-bold border-b-2 border-brand pb-4 -mb-[17px]">Privacy Charter</a>
+                        <a href="terms.html"
+                            class="text-slate-500 hover:text-slate-800 font-medium transition-colors">Terms of
+                            Operations</a>
+                    </div>
+
+                    <div
+                        class="prose prose-lg prose-slate max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-brand prose-img:rounded-2xl">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Introduction</h2>
+                        <p class="text-slate-600 mb-6">
+                            Welcome to SetupInGCC ("we," "our," or "us"). We are committed to protecting your personal
+                            information and your right to privacy. If you have any questions or concerns about our
+                            policy, or our practices with regards to your personal information, please contact us at
+                            info@setupingcc.com.
+                        </p>
+                        <p class="text-slate-600 mb-8">
+                            When you visit our website and use our services, you trust us with your personal
+                            information. We take your privacy very seriously. In this privacy notice, we describe our
+                            privacy policy. We seek to explain to you in the clearest way possible what information we
+                            collect, how we use it, and what rights you have in relation to it.
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Information We Collect</h2>
+                        <p class="text-slate-600 mb-4">
+                            We collect personal information that you voluntarily provide to us when registering at the
+                            Services expressing an interest in obtaining information about us or our products and
+                            services, when participating in activities on the Services or otherwise contacting us.
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-8">
+                            <li><strong>Personal Information Given by You.</strong> We collect names; phone numbers;
+                                email addresses; job titles; and other similar information.</li>
+                            <li><strong>Information automatically collected.</strong> We automatically collect certain
+                                information when you visit, use or navigate the Services. This information does not
+                                reveal your specific identity (like your name or contact information) but may include
+                                device and usage information, such as your IP address, browser and device
+                                characteristics, operating system, language preferences, referring URLs, device name,
+                                country, location, information about how and when you use our Services and other
+                                technical information.</li>
+                        </ul>
+
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4">3. How We Use Your Information</h2>
+                        <p class="text-slate-600 mb-4">
+                            We use personal information collected via our Services for a variety of business purposes
+                            described below. We process your personal information for these purposes in reliance on our
+                            legitimate business interests, in order to enter into or perform a contract with you, with
+                            your consent, and/or for compliance with our legal obligations.
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-8">
+                            <li>To facilitate account creation and logon process.</li>
+                            <li>To send you marketing and promotional communications.</li>
+                            <li>To send administrative information to you.</li>
+                            <li>To fulfill and manage your orders.</li>
+                            <li>To post testimonials.</li>
+                            <li>To deliver targeted advertising to you.</li>
+                        </ul>
+
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Sharing Your Information</h2>
+                        <p class="text-slate-600 mb-8">
+                            We only share information with your consent, to comply with laws, to provide you with
+                            services, to protect your rights, or to fulfill business obligations. We may process or
+                            share data based on the following legal basis: Consent, Legitimate Interests, Performance of
+                            a Contract, or Legal Obligations.
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Security of Your Information</h2>
+                        <p class="text-slate-600 mb-8">
+                            We use administrative, technical, and physical security measures to help protect your
+                            personal information. While we have taken reasonable steps to secure the personal
+                            information you provide to us, please be aware that despite our efforts, no security
+                            measures are perfect or impenetrable, and no method of data transmission can be guaranteed
+                            against any interception or other type of misuse.
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Contact Us</h2>
+                        <p class="text-slate-600 mb-4">
+                            If you have questions or comments about this policy, you may email us at info@setupingcc.com
+                            or by post to:
+                        </p>
+                        <address class="not-italic bg-slate-50 p-6 rounded-xl border border-slate-100 text-slate-700">
+                            <strong>SetupInGCC International</strong><br>
+                            Business Center, King Abdullah Road<br>
+                            Riyadh, Saudi Arabia<br>
+                            Phone: +966 53 890 4337
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-20 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 gap-10 md:mb-24">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-4 mb-10">
+                        <div
+                            class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="text-3xl font-heading font-bold tracking-tight text-white uppercase">
+                            Setup<span class="text-brand">InGCC</span>
+                        </span>
+                    </a>
+                    <p class="text-lg leading-relaxed mb-10 opacity-70">
+                        Premier global business consultancy specializing in corporate growth, strategic planning, and
+                        legal compliance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Resources</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="about.html" class="hover:text-brand transition-colors">Company Story</a></li>
+                        <li><a href="services.html" class="hover:text-brand transition-colors">Our Services</a></li>
+                        <li><a href="blog.html" class="hover:text-brand transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brand transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Services</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="service-details.html" class="hover:text-brand transition-colors">Business Setup</a>
+                        </li>
+                        <li><a href="#" class="hover:text-brand transition-colors">PRO Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">IP Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Legal Advisory</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Global Office</h4>
+                    <ul class="space-y-8 text-lg">
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-map-pin text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">Business Center, King Abdullah Road Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-phone-volume text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">+966 53 890 4337</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-envelope-open text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70 underline underline-offset-4">info@setupingcc.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-5 opacity-40 text-sm">
+                <p class="text-center md:text-start">&copy; 2026 SetupInGCC International. All rights reserved.</p>
+                <div class="flex gap-12">
+                    <a href="privacy.html" class="hover:text-white transition-colors text-white">Privacy Charter</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Operations</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop"
+        class="cursor-pointer fixed bottom-8 right-8 w-14 h-14 bg-brand text-white rounded-2xl shadow-2xl shadow-brand/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-brand-dark hover:scale-110 active:scale-95 z-50">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

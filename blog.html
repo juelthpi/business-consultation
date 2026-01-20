@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | SetupInGCC - Dubai Business Insights</title>
+    <meta name="description"
+        content="Expert insights, guides, and latest updates on Dubai business setup, regulations, and opportunities in the GCC region.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Local Tailwind v4 Compiled CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand selection:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2">
+        <div class="w-full mx-auto px-4 md:px-6">
+            <nav
+                class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-slate-200/50 px-6 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 bg-brand rounded-xl flex items-center justify-center text-white text-xl group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-2xl font-heading font-bold tracking-tight text-slate-800">
+                        Setup<span class="text-brand">InGCC</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                    <li><a href="index.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Home</a></li>
+                    <li><a href="about.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">About</a></li>
+                    <li><a href="services.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Services</a>
+                    </li>
+                    <li><a href="blog.html" class="text-brand font-bold">Blog</a></li>
+                    <li><a href="contact.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="flex items-center gap-4">
+                    <a href="contact.html"
+                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95 hover:shadow-brand/40">
+                        Get Started
+                    </a>
+                    <button id="mobileMenuBtn"
+                        class="lg:hidden w-10 h-10 flex items-center justify-center text-slate-700 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
+        <div id="mobileMenuBackdrop"
+            class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+        <div id="mobileMenuContent"
+            class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
+            <div class="flex items-center justify-between mb-12">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-sm">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-800">Setup<span
+                            class="text-brand">InGCC</span></span>
+                </a>
+                <button id="closeMenuBtn"
+                    class="w-10 h-10 flex items-center justify-center text-slate-500 text-xl hover:text-brand transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="flex-grow">
+                <ul class="space-y-6">
+                    <li><a href="index.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Home</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">About</a>
+                    </li>
+                    <li><a href="services.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Services</a>
+                    </li>
+                    <li><a href="blog.html" class="text-base font-bold text-brand block">Blog</a></li>
+                    <li><a href="contact.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-16 overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 -z-10">
+                <img src="./assets/images/blog/blog-1.png" class="w-full h-full object-cover"
+                    alt="Dubai Business Background">
+                <!-- Dark Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-brand/80"></div>
+                <!-- Pattern Overlay -->
+                <div class="absolute inset-0 bg-grid-white/[0.02]"></div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-brand/10 -skew-x-12 translate-x-1/4 -z-10"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand/20 rounded-full blur-[120px] -z-10"></div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <span
+                        class="inline-flex items-center gap-3 bg-brand/20 backdrop-blur-sm border border-brand/30 text-brand px-6 py-2 rounded-full text-xs font-black tracking-[0.4em] uppercase mb-6 shadow-lg">
+                        <i class="fa-solid fa-newspaper"></i>
+                        Our Blog
+                    </span>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-[1.1] mb-6"
+                        data-aos="fade-up">
+                        Expert Insights on <span class="text-brand">Dubai Business</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-200 mb-10 leading-relaxed" data-aos="fade-up"
+                        data-aos-delay="100">
+                        Stay updated with the latest trends, regulations, and opportunities in the GCC business
+                        landscape
+                    </p>
+
+                    <!-- Search Bar -->
+                    <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative">
+                            <input type="text" placeholder="Search articles..."
+                                class="w-full bg-white/95 backdrop-blur-sm border-2 border-white/20 rounded-2xl px-6 py-4 pl-14 focus:outline-none focus:border-brand focus:bg-white focus:shadow-2xl focus:shadow-brand/20 transition-all font-medium">
+                            <i class="fa-solid fa-search absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Blog Grid -->
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <article
+                        class="group relative bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)]"
+                        data-aos="fade-up">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="./assets/images/blog/blog-1.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Dubai Business Setup">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent">
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="inline-block bg-brand text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg">Business
+                                    Setup</span>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-lg">
+                                    <i class="fa-solid fa-clock text-brand"></i> 5 min
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 text-slate-400 text-sm mb-3">
+                                <i class="fa-solid fa-calendar-days text-brand"></i>
+                                <span>January 15, 2026</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-brand transition-colors">
+                                Complete Guide to Starting Your Business in Dubai
+                            </h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                                Discover the essential steps, legal requirements, and strategic insights for
+                                successfully establishing your business in Dubai's thriving market.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center">
+                                        <i class="fa-solid fa-user text-brand"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Sarah Ahmed</p>
+                                        <p class="text-xs text-slate-400">Business Consultant</p>
+                                    </div>
+                                </div>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:border-brand transition-all duration-300">
+                                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article
+                        class="group relative bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)]"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="./assets/images/blog/blog-2.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="UAE Regulations">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent">
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="inline-block bg-emerald-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg">Regulations</span>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-lg">
+                                    <i class="fa-solid fa-clock text-brand"></i> 7 min
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 text-slate-400 text-sm mb-3">
+                                <i class="fa-solid fa-calendar-days text-brand"></i>
+                                <span>January 12, 2026</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-brand transition-colors">
+                                Understanding UAE Business Regulations in 2026
+                            </h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                                Navigate the latest regulatory updates and compliance requirements for businesses
+                                operating in the UAE with our comprehensive breakdown.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center">
+                                        <i class="fa-solid fa-user text-brand"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Mohammed Al-Rashid</p>
+                                        <p class="text-xs text-slate-400">Legal Advisor</p>
+                                    </div>
+                                </div>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:border-brand transition-all duration-300">
+                                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article
+                        class="group relative bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)]"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="./assets/images/blog/blog-3.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Business Licensing">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent">
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="inline-block bg-blue-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg">Licensing</span>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-lg">
+                                    <i class="fa-solid fa-clock text-brand"></i> 6 min
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 text-slate-400 text-sm mb-3">
+                                <i class="fa-solid fa-calendar-days text-brand"></i>
+                                <span>January 10, 2026</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-brand transition-colors">
+                                Types of Business Licenses Available in Dubai
+                            </h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                                Explore the different types of business licenses in Dubai and find the perfect fit for
+                                your company's needs and industry requirements.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center">
+                                        <i class="fa-solid fa-user text-brand"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Fatima Hassan</p>
+                                        <p class="text-xs text-slate-400">Licensing Expert</p>
+                                    </div>
+                                </div>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:border-brand transition-all duration-300">
+                                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 4 -->
+                    <article
+                        class="group relative bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)]"
+                        data-aos="fade-up">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="./assets/images/blog/blog-4.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Tax Finance">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent">
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="inline-block bg-purple-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg">Tax
+                                    & Finance</span>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-lg">
+                                    <i class="fa-solid fa-clock text-brand"></i> 8 min
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 text-slate-400 text-sm mb-3">
+                                <i class="fa-solid fa-calendar-days text-brand"></i>
+                                <span>January 8, 2026</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-brand transition-colors">
+                                UAE Tax System: A Complete Guide for Businesses
+                            </h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                                Understanding VAT, corporate tax, and other financial obligations for businesses
+                                operating in the United Arab Emirates.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center">
+                                        <i class="fa-solid fa-user text-brand"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Ahmed Khalil</p>
+                                        <p class="text-xs text-slate-400">Tax Consultant</p>
+                                    </div>
+                                </div>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:border-brand transition-all duration-300">
+                                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 5 -->
+                    <article
+                        class="group relative bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)]"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="./assets/images/blog/blog-5.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Startup Guide">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent">
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="inline-block bg-brand text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg">Business
+                                    Setup</span>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-lg">
+                                    <i class="fa-solid fa-clock text-brand"></i> 10 min
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 text-slate-400 text-sm mb-3">
+                                <i class="fa-solid fa-calendar-days text-brand"></i>
+                                <span>January 5, 2026</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-brand transition-colors">
+                                How to Launch a Successful Startup in Dubai
+                            </h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                                From ideation to execution: A comprehensive roadmap for entrepreneurs looking to build
+                                their startup in Dubai's dynamic ecosystem.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center">
+                                        <i class="fa-solid fa-user text-brand"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Layla Ibrahim</p>
+                                        <p class="text-xs text-slate-400">Startup Advisor</p>
+                                    </div>
+                                </div>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:border-brand transition-all duration-300">
+                                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 6 -->
+                    <article
+                        class="group relative bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-brand/30 transition-all duration-500 hover:shadow-[0_50px_100px_-20px_rgba(0,102,51,0.15)]"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="./assets/images/blog/blog-6.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Visa Services">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent">
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="inline-block bg-yellow-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg">Visa
+                                    Services</span>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-slate-700 px-3 py-2 rounded-xl text-xs font-bold shadow-lg">
+                                    <i class="fa-solid fa-clock text-brand"></i> 6 min
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 text-slate-400 text-sm mb-3">
+                                <i class="fa-solid fa-calendar-days text-brand"></i>
+                                <span>January 3, 2026</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-brand transition-colors">
+                                Dubai Business Visa Requirements and Process
+                            </h3>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                                Everything you need to know about obtaining business visas for yourself and your
+                                employees in the UAE.
+                            </p>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center">
+                                        <i class="fa-solid fa-user text-brand"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Omar Mansoor</p>
+                                        <p class="text-xs text-slate-400">Immigration Expert</p>
+                                    </div>
+                                </div>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-brand group-hover:text-white group-hover:border-brand transition-all duration-300">
+                                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center items-center gap-2 mt-16" data-aos="fade-up">
+                    <button
+                        class="w-10 h-10 rounded-xl border border-slate-200 flex items-center justify-center hover:bg-brand hover:text-white hover:border-brand transition-all">
+                        <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </button>
+                    <button
+                        class="w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center font-bold">1</button>
+                    <button
+                        class="w-10 h-10 rounded-xl border border-slate-200 flex items-center justify-center hover:bg-brand hover:text-white hover:border-brand transition-all font-bold">2</button>
+                    <button
+                        class="w-10 h-10 rounded-xl border border-slate-200 flex items-center justify-center hover:bg-brand hover:text-white hover:border-brand transition-all font-bold">3</button>
+                    <span class="px-2 text-slate-400">...</span>
+                    <button
+                        class="w-10 h-10 rounded-xl border border-slate-200 flex items-center justify-center hover:bg-brand hover:text-white hover:border-brand transition-all font-bold">10</button>
+                    <button
+                        class="w-10 h-10 rounded-xl border border-slate-200 flex items-center justify-center hover:bg-brand hover:text-white hover:border-brand transition-all">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-brand relative overflow-hidden mx-4 md:mx-6 mb-12 rounded-2xl">
+            <div class="absolute inset-0 bg-[url('./assets/images/bg/carbon-fibre.png')] opacity-10">
+            </div>
+            <div class="container mx-auto px-10 relative z-10 text-center md:text-left py-12">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                    <div class="text-white max-w-3xl">
+                        <h2 class="text-2xl md:text-4xl font-heading font-bold mb-4 leading-tight">Let's Build Your
+                            <span class="bg-white text-brand px-4 py-1 rounded-2xl">Empire</span> Together
+                        </h2>
+                        <p class="text-white/80 text-xl leading-relaxed">Start your journey today with a 30-minute free
+                            discovery call.</p>
+                    </div>
+                    <div>
+                        <a href="contact.html"
+                            class="inline-block bg-white text-brand px-12 py-3 rounded-3xl font-bold text-xl hover:bg-slate-100 transition-all shadow-2xl active:scale-95 whitespace-nowrap">
+                            Contact Us Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-20 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 gap-10 md:mb-24">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-4 mb-10">
+                        <div
+                            class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="text-3xl font-heading font-bold tracking-tight text-white uppercase">
+                            Setup<span class="text-brand">InGCC</span>
+                        </span>
+                    </a>
+                    <p class="text-lg leading-relaxed mb-10 opacity-70">
+                        Premier global business consultancy specializing in corporate growth, strategic planning, and
+                        legal compliance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Resources</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="about.html" class="hover:text-brand transition-colors">Company Story</a></li>
+                        <li><a href="services.html" class="hover:text-brand transition-colors">Our Ecosystem</a></li>
+                        <li><a href="blog.html" class="hover:text-brand transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brand transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Specialties</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="#" class="hover:text-brand transition-colors">Mainland Setup</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Offshore Banking</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Golden Visa</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Tax Residency</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Global Office</h4>
+                    <ul class="space-y-8 text-lg">
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-map-pin text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">Business Center, King Abdullah Road Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-phone-volume text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">+966 53 890 4337</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-envelope-open text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70 underline underline-offset-4">info@setupingcc.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-5 opacity-40 text-sm">
+                <p class="text-center md:text-start">&copy; 2026 SetupInGCC International. All rights reserved.</p>
+                <div class="flex gap-12">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Charter</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Operations</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop"
+        class="cursor-pointer fixed bottom-8 right-8 w-14 h-14 bg-brand text-white rounded-2xl shadow-2xl shadow-brand/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-brand-dark hover:scale-110 active:scale-95 z-50">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

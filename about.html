@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | DUVOLKS Consultants</title>
+    <title>About Us | SetupInGCC - Leading Business Consultancy</title>
+    <meta name="description"
+        content="Learn about SetupInGCC, the premier business consultancy in Saudi Arabia. Discover our mission, vision, and values that drive your success in the GCC market.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +18,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Local Tailwind v4 Compiled CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -23,8 +28,8 @@
 <body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand selection:text-white">
 
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4">
-        <div class="container mx-auto px-4 md:px-6">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2">
+        <div class="w-full mx-auto px-4 md:px-6">
             <nav
                 class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-slate-200/50 px-6 py-3 flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-2 group">
@@ -33,21 +38,28 @@
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
                     <span class="text-2xl font-heading font-bold tracking-tight text-slate-800">
-                        DU<span class="text-brand">VOLKS</span>
+                        Setup<span class="text-brand">InGCC</span>
                     </span>
                 </a>
 
                 <!-- Desktop Nav -->
                 <ul class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
-                    <li><a href="index.html" class="hover:text-brand transition-all">Home</a></li>
+                    <li><a href="index.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Home</a></li>
                     <li><a href="about.html" class="text-brand font-bold">About</a></li>
-                    <li><a href="services.html" class="hover:text-brand transition-all">Services</a></li>
-                    <li><a href="contact.html" class="hover:text-brand transition-all">Contact</a></li>
+                    <li><a href="services.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Services</a>
+                    </li>
+                    <li><a href="blog.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Blog</a></li>
+                    <li><a href="contact.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Contact</a>
+                    </li>
                 </ul>
 
                 <div class="flex items-center gap-4">
                     <a href="contact.html"
-                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95">
+                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95 hover:shadow-brand/40">
                         Get Started
                     </a>
                     <button id="mobileMenuBtn"
@@ -59,13 +71,10 @@
         </div>
     </header>
 
-    <!-- Mobile Menu Off-canvas -->
+    <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
-        <!-- Backdrop -->
         <div id="mobileMenuBackdrop"
             class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
-
-        <!-- Menu Content -->
         <div id="mobileMenuContent"
             class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
             <div class="flex items-center justify-between mb-12">
@@ -73,15 +82,14 @@
                     <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-sm">
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
-                    <span class="text-xl font-bold tracking-tight text-slate-800">DU<span
-                            class="text-brand">VOLKS</span></span>
+                    <span class="text-xl font-bold tracking-tight text-slate-800">Setup<span
+                            class="text-brand">InGCC</span></span>
                 </a>
                 <button id="closeMenuBtn"
                     class="w-10 h-10 flex items-center justify-center text-slate-500 text-xl hover:text-brand transition-colors">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-
             <nav class="flex-grow">
                 <ul class="space-y-6">
                     <li><a href="index.html"
@@ -91,12 +99,14 @@
                     <li><a href="services.html"
                             class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Services</a>
                     </li>
+                    <li><a href="blog.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Blog</a>
+                    </li>
                     <li><a href="contact.html"
                             class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Contact</a>
                     </li>
                 </ul>
             </nav>
-
             <div class="mt-auto pt-10 border-t border-slate-100">
                 <a href="contact.html"
                     class="w-full bg-brand text-white py-3 rounded-2xl font-bold text-center block shadow-lg shadow-brand/20 active:scale-95 text-base">
@@ -105,7 +115,7 @@
                 <div class="flex items-center justify-center gap-6 mt-8">
                     <a href="#"
                         class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
-                            class="fa-brands fa-facebook-f"></i></a>
+                            class="fa-brands fa-linkedin-in"></i></a>
                     <a href="#"
                         class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
                             class="fa-brands fa-twitter"></i></a>
@@ -118,97 +128,324 @@
     </div>
 
     <main>
-        <!-- Page Hero -->
-        <section class="pt-48 pb-24 bg-slate-900 text-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-brand/5 -z-0"></div>
-            <div class="container mx-auto px-4 relative z-10 text-center">
-                <h1 class="text-5xl md:text-7xl font-heading font-bold mb-8">Our Journey to <span
-                        class="text-brand">Excellence</span></h1>
-                <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">Dedicated to empowering businesses
-                    through strategic innovation and world-class consultancy since 2011.</p>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-16 overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 -z-10">
+                <img src="./assets/images/blog/blog-1.png" class="w-full h-full object-cover" alt="About Hero">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-brand/80"></div>
+                <div class="absolute inset-0 bg-grid-white/[0.02]"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="container mx-auto px-4 md:px-6 relative z-10 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <span
+                        class="inline-block py-2 px-6 rounded-full bg-brand/10 border border-brand/20 text-brand font-bold text-sm tracking-widest uppercase mb-6"
+                        data-aos="fade-down">
+                        Our Story
+                    </span>
+                    <h1 class="text-3xl md:text-4xl lg:text-6xl font-heading font-bold text-white mb-8 leading-tight"
+                        data-aos="fade-up" data-aos-delay="100">
+                        Bridging Visions with <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-emerald-400">Reality</span>
+                    </h1>
+                    <p class="text-lg md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-light"
+                        data-aos="fade-up" data-aos-delay="200">
+                        Dedicated to empowering businesses through strategic innovation, global compliance, and
+                        world-class consultancy since 2011.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="absolute top-1/4 left-10 w-24 h-24 bg-brand/10 rounded-full blur-2xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl animate-float">
             </div>
         </section>
 
-        <!-- Mission/Vision -->
-        <section class="py-32 bg-white">
-            <div class="container mx-auto px-4">
+        <!-- Stats Section -->
+        <section
+            class="py-12 bg-white relative -mt-10 mx-4 md:mx-6 rounded-[2.5rem] shadow-2xl z-20 border border-slate-100 max-w-7xl lg:mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100">
+                <div class="text-center group p-4" data-aos="fade-up" data-aos-delay="0">
+                    <h3
+                        class="text-4xl md:text-5xl font-black text-slate-900 mb-2 group-hover:text-brand transition-colors">
+                        15+</h3>
+                    <p class="text-slate-500 font-medium text-sm md:text-base">Years of Excellence</p>
+                </div>
+                <div class="text-center group p-4" data-aos="fade-up" data-aos-delay="100">
+                    <h3
+                        class="text-4xl md:text-5xl font-black text-slate-900 mb-2 group-hover:text-brand transition-colors">
+                        2.5k+</h3>
+                    <p class="text-slate-500 font-medium text-sm md:text-base">Global Clients</p>
+                </div>
+                <div class="text-center group p-4" data-aos="fade-up" data-aos-delay="200">
+                    <h3
+                        class="text-4xl md:text-5xl font-black text-slate-900 mb-2 group-hover:text-brand transition-colors">
+                        98%</h3>
+                    <p class="text-slate-500 font-medium text-sm md:text-base">Success Rate</p>
+                </div>
+                <div class="text-center group p-4" data-aos="fade-up" data-aos-delay="300">
+                    <h3
+                        class="text-4xl md:text-5xl font-black text-slate-900 mb-2 group-hover:text-brand transition-colors">
+                        50+</h3>
+                    <p class="text-slate-500 font-medium text-sm md:text-base">Expert Consultants</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section -->
+        <section class="py-20 bg-slate-50 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full -z-0"></div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
                 <div class="grid lg:grid-cols-2 gap-20 items-center">
-                    <div>
-                        <span class="text-brand font-bold tracking-widest uppercase text-sm mb-4 inline-block">The
-                            Foundation</span>
-                        <h2 class="text-4xl md:text-5xl font-heading font-bold mb-8 text-slate-900">Empowering Ambition
-                            with Precision</h2>
-                        <img src="./assets/images/about.png" class="rounded-[3rem] shadow-2xl mb-10" alt="About">
-                    </div>
-                    <div class="space-y-12">
-                        <div
-                            class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:bg-white hover:shadow-xl transition-all">
+                    <div data-aos="fade-right">
+                        <span class="text-brand font-bold tracking-widest uppercase text-sm mb-4 inline-block">Role &
+                            Purpose</span>
+                        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 mb-8 leading-tight">
+                            Empowering Your Ambition with <span class="relative z-10 inline-block">Precision
+                                <span class="absolute bottom-2 left-0 w-full h-3 bg-brand/10 -z-10"></span>
+                            </span>
+                        </h2>
+                        <div class="space-y-8">
+                            <!-- Vision Card -->
                             <div
-                                class="w-16 h-16 bg-brand/10 text-brand rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand group-hover:text-white transition-all">
-                                <i class="fa-solid fa-eye"></i>
+                                class="group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:border-brand/30 transition-all duration-300">
+                                <div
+                                    class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand text-2xl mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-slate-900 mb-3">Our Vision</h3>
+                                <p class="text-slate-600 leading-relaxed">
+                                    To be the world's most trusted partner for sustainable corporate growth and
+                                    international market expansion, setting new bookmarks for excellence.
+                                </p>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
-                            <p class="text-slate-500 text-lg leading-relaxed">To be the world's most trusted partner for
-                                sustainable corporate growth and international market expansion.</p>
+
+                            <!-- Mission Card -->
+                            <div
+                                class="group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:border-blue-500/30 transition-all duration-300">
+                                <div
+                                    class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-slate-900 mb-3">Our Mission</h3>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Providing high-impact strategic solutions that simplify complexity. We drive
+                                    measurable success for our clients through data-driven insights and expert guidance.
+                                </p>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="relative" data-aos="fade-left">
+                        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl group border-8 border-white">
+                            <img src="./assets/images/about.png"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                alt="Meeting">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                        </div>
+
+                        <!-- Floating Badge -->
                         <div
-                            class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:bg-white hover:shadow-xl transition-all">
-                            <div
-                                class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand group-hover:text-white transition-all">
-                                <i class="fa-solid fa-bullseye-arrow"></i>
+                            class="absolute -bottom-10 -left-10 bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 hidden md:block animate-float">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center text-white text-3xl shadow-lg shadow-emerald-500/30">
+                                    <i class="fa-solid fa-check-double"></i>
+                                </div>
+                                <div>
+                                    <p class="text-slate-900 font-bold text-lg">Official Partner</p>
+                                    <p class="text-slate-500 text-sm">Certified Excellence</p>
+                                </div>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
-                            <p class="text-slate-500 text-lg leading-relaxed">Providing high-impact strategic solutions
-                                that simplify complexity and drive measurable success for our clients.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Our Values -->
-        <section class="py-32 bg-slate-50">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-20">
-                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-slate-900">The Values We Live By</h2>
+        <!-- Core Values -->
+        <section class="py-20 bg-white relative">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                    <span class="text-brand font-bold tracking-widest uppercase text-sm mb-4 inline-block">Company
+                        Strategy</span>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 mb-6">The Values We Live By
+                    </h2>
+                    <p class="text-lg text-slate-600">Our core values define who we are and guiding every decision we
+                        make for our clients.</p>
                 </div>
+
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div
-                        class="p-10 bg-white rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-slate-100 text-center group">
-                        <div class="text-brand text-5xl mb-8 group-hover:scale-110 transition-transform"><i
-                                class="fa-solid fa-hand-holding-heart"></i></div>
-                        <h4 class="text-2xl font-bold mb-4">Integrity</h4>
-                        <p class="text-slate-500">Unwavering commitment to honesty and ethical practices in every
-                            engagement.</p>
+                    <!-- Value 1 -->
+                    <div class="group p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] transition-all duration-300"
+                        data-aos="fade-up" data-aos-delay="0">
+                        <div
+                            class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-4xl text-brand mb-8 shadow-sm group-hover:scale-110 group-hover:bg-brand group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Integrity</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            We uphold the highest standards of honesty and ethical practices in every engagement,
+                            building lasting trust with our partners.
+                        </p>
                     </div>
-                    <div
-                        class="p-10 bg-white rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-slate-100 text-center group">
-                        <div class="text-brand text-5xl mb-8 group-hover:scale-110 transition-transform"><i
-                                class="fa-solid fa-lightbulb-on"></i></div>
-                        <h4 class="text-2xl font-bold mb-4">Innovation</h4>
-                        <p class="text-slate-500">Constantly evolving our strategies to stay ahead of global market
-                            shifts.</p>
+
+                    <!-- Value 2 -->
+                    <div class="group p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] transition-all duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-4xl text-blue-500 mb-8 shadow-sm group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Innovation</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Constantly evolving our strategies and embracing new technologies to stay ahead of global
+                            market shifts and challenges.
+                        </p>
                     </div>
-                    <div
-                        class="p-10 bg-white rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-slate-100 text-center group">
-                        <div class="text-brand text-5xl mb-8 group-hover:scale-110 transition-transform"><i
-                                class="fa-solid fa-gem"></i></div>
-                        <h4 class="text-2xl font-bold mb-4">Quality</h4>
-                        <p class="text-slate-500">Delivering excellence that sets new benchmarks for corporate
-                            consultancy.</p>
+
+                    <!-- Value 3 -->
+                    <div class="group p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] transition-all duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-4xl text-emerald-500 mb-8 shadow-sm group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Quality</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Delivering excellence that sets new benchmarks. We are committed to providing superior
+                            consultancy that drives real value.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-brand relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-white/[0.1] -z-0"></div>
+            <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute -right-20 -top-20 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-8" data-aos="fade-up">Ready to
+                    Transform Your Business?</h2>
+                <p class="text-xl text-emerald-100 max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+                    Join hundreds of successful companies that have partnered with SetupInGCC to achieve their goals.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
+                    <a href="contact.html"
+                        class="bg-white text-brand px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all shadow-xl hover:scale-105 active:scale-95">
+                        Start Conversation
+                    </a>
+                    <a href="services.html"
+                        class="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-300 pt-32 pb-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2026 DUVOLKS International. All rights reserved.</p>
+    <footer class="bg-slate-950 text-slate-300 pt-20 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 gap-10 md:mb-24">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-4 mb-10">
+                        <div
+                            class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="text-3xl font-heading font-bold tracking-tight text-white uppercase">
+                            Setup<span class="text-brand">InGCC</span>
+                        </span>
+                    </a>
+                    <p class="text-lg leading-relaxed mb-10 opacity-70">
+                        Premier global business consultancy specializing in corporate growth, strategic planning, and
+                        legal compliance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Resources</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="about.html"
+                                class="hover:text-brand transition-colors text-brand font-medium">Company Story</a></li>
+                        <li><a href="services.html" class="hover:text-brand transition-colors">Our Services</a></li>
+                        <li><a href="blog.html" class="hover:text-brand transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brand transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Services</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="service-details.html" class="hover:text-brand transition-colors">Business Setup</a>
+                        </li>
+                        <li><a href="#" class="hover:text-brand transition-colors">PRO Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">IP Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Legal Advisory</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Global Office</h4>
+                    <ul class="space-y-8 text-lg">
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-map-pin text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">Business Center, King Abdullah Road Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-phone-volume text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">+966 53 890 4337</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-envelope-open text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70 underline underline-offset-4">info@setupingcc.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-5 opacity-40 text-sm">
+                <p class="text-center md:text-start">&copy; 2026 SetupInGCC International. All rights reserved.</p>
+                <div class="flex gap-12">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Charter</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Operations</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop"
+        class="cursor-pointer fixed bottom-8 right-8 w-14 h-14 bg-brand text-white rounded-2xl shadow-2xl shadow-brand/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-brand-dark hover:scale-110 active:scale-95 z-50">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
     <script src="./js/main.js"></script>
 </body>

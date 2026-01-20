@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | DUVOLKS Consultants</title>
+    <title>Our Services | SetupInGCC - Comprehensive Business Solutions</title>
+    <meta name="description"
+        content="Explore our comprehensive range of business consulting services in Dubai and GCC. From business setup to post-licensing support, we cover it all.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +18,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Local Tailwind v4 Compiled CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -23,8 +28,8 @@
 <body class="bg-slate-50 text-slate-900 font-sans selection:bg-brand selection:text-white">
 
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4">
-        <div class="container mx-auto px-4 md:px-6">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2">
+        <div class="w-full mx-auto px-4 md:px-6">
             <nav
                 class="bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-slate-200/50 px-6 py-3 flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-2 group">
@@ -33,21 +38,27 @@
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
                     <span class="text-2xl font-heading font-bold tracking-tight text-slate-800">
-                        DU<span class="text-brand">VOLKS</span>
+                        Setup<span class="text-brand">InGCC</span>
                     </span>
                 </a>
 
                 <!-- Desktop Nav -->
                 <ul class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
-                    <li><a href="index.html" class="hover:text-brand transition-all">Home</a></li>
-                    <li><a href="about.html" class="hover:text-brand transition-all">About</a></li>
+                    <li><a href="index.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Home</a></li>
+                    <li><a href="about.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">About</a></li>
                     <li><a href="services.html" class="text-brand font-bold">Services</a></li>
-                    <li><a href="contact.html" class="hover:text-brand transition-all">Contact</a></li>
+                    <li><a href="blog.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Blog</a></li>
+                    <li><a href="contact.html"
+                            class="hover:text-brand transition-all hover:translate-y-[-2px] inline-block">Contact</a>
+                    </li>
                 </ul>
 
                 <div class="flex items-center gap-4">
                     <a href="contact.html"
-                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95">
+                        class="hidden md:flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-brand/20 active:scale-95 hover:shadow-brand/40">
                         Get Started
                     </a>
                     <button id="mobileMenuBtn"
@@ -59,13 +70,10 @@
         </div>
     </header>
 
-    <!-- Mobile Menu Off-canvas -->
+    <!-- Mobile Menu -->
     <div id="mobileMenu" class="fixed inset-0 z-[60] invisible overflow-hidden transition-all duration-500">
-        <!-- Backdrop -->
         <div id="mobileMenuBackdrop"
             class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
-
-        <!-- Menu Content -->
         <div id="mobileMenuContent"
             class="absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out p-8 flex flex-col">
             <div class="flex items-center justify-between mb-12">
@@ -73,15 +81,14 @@
                     <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center text-white text-sm">
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
-                    <span class="text-xl font-bold tracking-tight text-slate-800">DU<span
-                            class="text-brand">VOLKS</span></span>
+                    <span class="text-xl font-bold tracking-tight text-slate-800">Setup<span
+                            class="text-brand">InGCC</span></span>
                 </a>
                 <button id="closeMenuBtn"
                     class="w-10 h-10 flex items-center justify-center text-slate-500 text-xl hover:text-brand transition-colors">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-
             <nav class="flex-grow">
                 <ul class="space-y-6">
                     <li><a href="index.html"
@@ -91,156 +98,498 @@
                             class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">About</a>
                     </li>
                     <li><a href="services.html" class="text-base font-bold text-brand block">Services</a></li>
+                    <li><a href="blog.html"
+                            class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Blog</a>
+                    </li>
                     <li><a href="contact.html"
                             class="text-base font-bold text-slate-600 hover:text-brand block transition-colors">Contact</a>
                     </li>
                 </ul>
             </nav>
-
-            <div class="mt-auto pt-10 border-t border-slate-100">
-                <a href="contact.html"
-                    class="w-full bg-brand text-white py-3 rounded-2xl font-bold text-center block shadow-lg shadow-brand/20 active:scale-95 text-base">
-                    Get Started
-                </a>
-                <div class="flex items-center justify-center gap-6 mt-8">
-                    <a href="#"
-                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"
-                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
-                            class="fa-brands fa-twitter"></i></a>
-                    <a href="#"
-                        class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand hover:text-white transition-all"><i
-                            class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
         </div>
     </div>
 
     <main>
-        <!-- Page Hero -->
-        <section class="pt-48 pb-24 bg-brand text-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-black/10 -z-0"></div>
-            <div class="container mx-auto px-4 relative z-10 text-center">
-                <h1 class="text-5xl md:text-7xl font-heading font-bold mb-8">What We <span
-                        class="text-brand-light">Empower</span></h1>
-                <p class="text-xl opacity-80 max-w-3xl mx-auto leading-relaxed">Comprehensive business solutions
-                    tailored for the modern corporate landscape.</p>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-16 overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 -z-10">
+                <img src="./assets/images/blog/blog-1.png" class="w-full h-full object-cover" alt="Services Hero">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-brand/80"></div>
+                <div class="absolute inset-0 bg-grid-white/[0.02]"></div>
+            </div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10 text-center">
+                <span
+                    class="inline-flex items-center gap-3 bg-brand/20 backdrop-blur-sm border border-brand/30 text-brand px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6"
+                    data-aos="fade-up">
+                    <i class="fa-solid fa-star"></i>
+                    World-Class Expertise
+                </span>
+
+                <h1 class="text-3xl md:text-4xl lg:text-6xl font-heading font-bold text-white leading-tight mb-6 max-w-4xl mx-auto"
+                    data-aos="fade-up" data-aos-delay="100">
+                    Comprehensive Solutions for Your <span class="text-brand">Business Growth</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-slate-200 mb-12 leading-relaxed max-w-2xl mx-auto" data-aos="fade-up"
+                    data-aos-delay="200">
+                    From initial setup to strategic expansion, we provide end-to-end consulting services tailored to the
+                    GCC market.
+                </p>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto border-t border-white/10 pt-12"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center group">
+                        <div
+                            class="text-3xl md:text-4xl font-bold text-white mb-1 group-hover:text-brand-light transition-colors">
+                            7+</div>
+                        <div class="text-sm font-medium text-slate-400 uppercase tracking-widest">Core Services</div>
+                    </div>
+                    <div class="text-center group">
+                        <div
+                            class="text-3xl md:text-4xl font-bold text-white mb-1 group-hover:text-brand-light transition-colors">
+                            50+</div>
+                        <div class="text-sm font-medium text-slate-400 uppercase tracking-widest">Experts</div>
+                    </div>
+                    <div class="text-center group">
+                        <div
+                            class="text-3xl md:text-4xl font-bold text-white mb-1 group-hover:text-brand-light transition-colors">
+                            2.5k+</div>
+                        <div class="text-sm font-medium text-slate-400 uppercase tracking-widest">Setups</div>
+                    </div>
+                    <div class="text-center group">
+                        <div
+                            class="text-3xl md:text-4xl font-bold text-white mb-1 group-hover:text-brand-light transition-colors">
+                            100%</div>
+                        <div class="text-sm font-medium text-slate-400 uppercase tracking-widest">Satisfaction</div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Services Grid -->
-        <section class="py-32 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Service Detailed 1 -->
-                    <div
-                        class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl transition-all group">
+        <!-- Main Services Grid -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <span class="text-brand font-bold tracking-wider uppercase text-sm mb-3 block">Our Expertise</span>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">Tailored Services for
+                        Every Stage</h2>
+                    <p class="text-lg text-slate-600">Whether you're starting freshly or expanding globally, our diverse
+                        portfolio of services ensures your business stays ahead of the curve.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1: Business Setup -->
+                    <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand/10 hover:border-brand/20 transition-all duration-300 relative overflow-hidden"
+                        data-aos="fade-up">
                         <div
-                            class="w-20 h-20 bg-brand/10 text-brand rounded-3xl flex items-center justify-center text-4xl mb-10 group-hover:bg-brand group-hover:text-white transition-all">
-                            <i class="fa-solid fa-building-circle-check"></i>
+                            class="absolute top-0 right-0 w-32 h-32 bg-brand/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-500">
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Offshore Setup</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed mb-8">Expert guidance on international tax
-                            jurisdictions and offshore company formations globally.</p>
-                        <ul class="space-y-3 mb-10">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Tax
-                                Optimization</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Legal
-                                Compliance</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Banking
-                                Support</li>
+
+                        <div
+                            class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center text-brand text-3xl mb-8 group-hover:bg-brand group-hover:text-white transition-all duration-300 relative z-10">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand transition-colors">
+                            Business Setup</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Complete guidance on Mainland, Free Zone, and
+                            Offshore company formation with 100% compliance.</p>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-brand"></i> License Registration
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-brand"></i> Documentation
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-brand"></i> Visa Processing
+                            </li>
                         </ul>
+
+                        <a href="service-details.html"
+                            class="inline-flex items-center gap-2 text-brand font-bold hover:gap-4 transition-all group-hover:underline">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
 
-                    <!-- Repeat for others... (Simplified for this task but high quality) -->
-                    <div
-                        class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl transition-all group">
+                    <!-- Service 2: PRO/GRO Services -->
+                    <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand/10 hover:border-brand/20 transition-all duration-300 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div
-                            class="w-20 h-20 bg-blue-100 text-blue-600 rounded-3xl flex items-center justify-center text-4xl mb-10 group-hover:bg-brand group-hover:text-white transition-all">
-                            <i class="fa-solid fa-address-card"></i>
+                            class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-500">
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Golden Visa</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed mb-8">Secure your long-term residency through
-                            investment and professional paths with our expert legal team.</p>
-                        <ul class="space-y-3 mb-10">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Document
-                                Pre-audit</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Fast-track
-                                Processing</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Renewal
-                                Logistics</li>
+
+                        <div
+                            class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 relative z-10">
+                            <i class="fa-solid fa-passport"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
+                            PRO & GRO Services</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Efficient handling of all government-related
+                            documentation and approvals to save your time.</p>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-blue-600"></i> Labor Contracts
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-blue-600"></i> Government Liaison
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-blue-600"></i> Document Attestation
+                            </li>
                         </ul>
+
+                        <a href="service-details.html"
+                            class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-4 transition-all group-hover:underline">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
 
-                    <div
-                        class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl transition-all group">
+                    <!-- Service 3: IP Services -->
+                    <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand/10 hover:border-brand/20 transition-all duration-300 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="200">
                         <div
-                            class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-3xl flex items-center justify-center text-4xl mb-10 group-hover:bg-brand group-hover:text-white transition-all">
-                            <i class="fa-solid fa-chart-line-up"></i>
+                            class="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-500">
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Growth Strategy</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed mb-8">Helping enterprises scale operations
-                            globally through innovative market-entry strategies.</p>
-                        <ul class="space-y-3 mb-10">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Competitor
-                                Analysis</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Revenue
-                                Optimization</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Brand
-                                Expansion</li>
+
+                        <div
+                            class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-600 text-3xl mb-8 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 relative z-10">
+                            <i class="fa-solid fa-copyright"></i>
+                        </div>
+
+                        <h3
+                            class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-purple-600 transition-colors">
+                            IP Services</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Protect your brand identity and intellectual
+                            property rights across the GCC region.</p>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-purple-600"></i> Trademark Registration
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-purple-600"></i> Copyright Protection
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-purple-600"></i> Patent Filing
+                            </li>
                         </ul>
+
+                        <a href="service-details.html"
+                            class="inline-flex items-center gap-2 text-purple-600 font-bold hover:gap-4 transition-all group-hover:underline">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 4: Management Advisory -->
+                    <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand/10 hover:border-brand/20 transition-all duration-300 relative overflow-hidden"
+                        data-aos="fade-up">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-500">
+                        </div>
+
+                        <div
+                            class="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-600 text-3xl mb-8 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 relative z-10">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <h3
+                            class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-orange-600 transition-colors">
+                            Management Advisory</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Strategic consulting to optimize operations,
+                            improve efficiency, and drive sustainable growth.</p>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-orange-600"></i> Feasibility Studies
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-orange-600"></i> Market Research
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-orange-600"></i> Process Optimization
+                            </li>
+                        </ul>
+
+                        <a href="service-details.html"
+                            class="inline-flex items-center gap-2 text-orange-600 font-bold hover:gap-4 transition-all group-hover:underline">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 5: Financial & Legal -->
+                    <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand/10 hover:border-brand/20 transition-all duration-300 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-slate-500/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-500">
+                        </div>
+
+                        <div
+                            class="w-16 h-16 bg-slate-500/10 rounded-2xl flex items-center justify-center text-slate-600 text-3xl mb-8 group-hover:bg-slate-600 group-hover:text-white transition-all duration-300 relative z-10">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-slate-600 transition-colors">
+                            Financial & Legal</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Expert advice on taxation, accounting, and legal
+                            compliance to ensure business stability.</p>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-slate-600"></i> VAT & Corporate Tax
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-slate-600"></i> Legal Agreements
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-slate-600"></i> Auditing Services
+                            </li>
+                        </ul>
+
+                        <a href="service-details.html"
+                            class="inline-flex items-center gap-2 text-slate-600 font-bold hover:gap-4 transition-all group-hover:underline">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 6: Enhancement Services -->
+                    <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand/10 hover:border-brand/20 transition-all duration-300 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-bl-[100px] -mr-8 -mt-8 transition-transform group-hover:scale-150 duration-500">
+                        </div>
+
+                        <div
+                            class="w-16 h-16 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-600 text-3xl mb-8 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 relative z-10">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-teal-600 transition-colors">
+                            Enhancement Services</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Value-added services including office spaces, IT
+                            solutions, and recruitment assistance.</p>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-teal-600"></i> Office Solutions
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-teal-600"></i> IT Infrastructure
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium text-sm">
+                                <i class="fa-solid fa-check-circle text-teal-600"></i> HR & Recruitment
+                            </li>
+                        </ul>
+
+                        <a href="service-details.html"
+                            class="inline-flex items-center gap-2 text-teal-600 font-bold hover:gap-4 transition-all group-hover:underline">
+                            View Details <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Process Section -->
-        <section class="py-32 bg-slate-900 text-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-20">
-                    <h2 class="text-4xl md:text-5xl font-heading font-bold">Our Working Process</h2>
+        <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-grid-white/[0.03]"></div>
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-brand/20 blur-[100px]"></div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <span class="text-brand font-bold tracking-wider uppercase text-sm mb-3 block">Process</span>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6">How We Deliver Excellence</h2>
+                    <p class="text-slate-400 text-lg">A systematic approach designed to simplify complications and
+                        accelerate your business goals.</p>
                 </div>
-                <div class="grid md:grid-cols-4 gap-12 text-center">
-                    <div class="relative">
-                        <div
-                            class="w-16 h-16 bg-brand rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 relative z-10">
-                            1</div>
-                        <h4 class="text-xl font-bold mb-4">Discovery</h4>
-                        <p class="text-slate-400">In-depth consultation to understand your unique business goals.</p>
+
+                <div class="grid md:grid-cols-4 gap-8 relative">
+                    <!-- Connector Line (Desktop) -->
+                    <div
+                        class="hidden md:block absolute top-12 left-0 w-full h-1 bg-gradient-to-r from-transparent via-slate-700 to-transparent -z-10">
                     </div>
-                    <div class="relative">
+
+                    <!-- Step 1 -->
+                    <div class="relative text-center group" data-aos="fade-up">
                         <div
-                            class="w-16 h-16 bg-brand rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 relative z-10">
-                            2</div>
-                        <h4 class="text-xl font-bold mb-4">Planning</h4>
-                        <p class="text-slate-400">Crafting a bespoke strategic roadmap for your success.</p>
+                            class="w-24 h-24 bg-slate-800 border-4 border-slate-700 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-8 relative z-10 group-hover:border-brand group-hover:bg-brand transition-all duration-300 shadow-xl">
+                            1
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Discovery</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed px-4">We analyze your business needs and
+                            objectives in detail.</p>
                     </div>
-                    <div class="relative">
+
+                    <!-- Step 2 -->
+                    <div class="relative text-center group" data-aos="fade-up" data-aos-delay="100">
                         <div
-                            class="w-16 h-16 bg-brand rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 relative z-10">
-                            3</div>
-                        <h4 class="text-xl font-bold mb-4">Execution</h4>
-                        <p class="text-slate-400">Implementing strategies with precision and full compliance.</p>
+                            class="w-24 h-24 bg-slate-800 border-4 border-slate-700 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-8 relative z-10 group-hover:border-brand group-hover:bg-brand transition-all duration-300 shadow-xl">
+                            2
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Strategy</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed px-4">We create a tailored roadmap for
+                            efficient execution.</p>
                     </div>
-                    <div class="relative">
+
+                    <!-- Step 3 -->
+                    <div class="relative text-center group" data-aos="fade-up" data-aos-delay="200">
                         <div
-                            class="w-16 h-16 bg-brand rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 relative z-10">
-                            4</div>
-                        <h4 class="text-xl font-bold mb-4">Monitoring</h4>
-                        <p class="text-slate-400">Continuous support and adjustment for sustained growth.</p>
+                            class="w-24 h-24 bg-slate-800 border-4 border-slate-700 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-8 relative z-10 group-hover:border-brand group-hover:bg-brand transition-all duration-300 shadow-xl">
+                            3
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Execution</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed px-4">Our experts handle all legalities and
+                            documentation.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative text-center group" data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="w-24 h-24 bg-slate-800 border-4 border-slate-700 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-8 relative z-10 group-hover:border-brand group-hover:bg-brand transition-all duration-300 shadow-xl">
+                            4
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Support</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed px-4">Ongoing assistance for your continued
+                            growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="bg-brand rounded-3xl overflow-hidden relative shadow-2xl shadow-brand/20">
+                    <div class="absolute inset-0 bg-[url('./assets/images/bg/carbon-fibre.png')] opacity-10"></div>
+                    <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-white/10 to-transparent">
+                    </div>
+
+                    <div class="relative z-10 p-12 md:p-20 text-center">
+                        <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6 leading-tight">
+                            Ready to Take Your Business <br>to the Next Level?
+                        </h2>
+                        <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                            Book a free consultation with our experts and discover how we can help you achieve your
+                            business goals in Dubai.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="contact.html"
+                                class="bg-white text-brand px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition-all shadow-lg active:scale-95">
+                                Schedule Consultation
+                            </a>
+                            <a href="tel:+966538904337"
+                                class="bg-brand-dark/50 backdrop-blur-sm border border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-dark transition-all active:scale-95 flex items-center justify-center gap-3">
+                                <i class="fa-solid fa-phone"></i> Call Now
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-950 text-slate-300 pt-32 pb-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2026 DUVOLKS International. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 pt-20 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 md:gap-20 gap-10 md:mb-24">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-4 mb-10">
+                        <div
+                            class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-white text-2xl">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="text-3xl font-heading font-bold tracking-tight text-white uppercase">
+                            Setup<span class="text-brand">InGCC</span>
+                        </span>
+                    </a>
+                    <p class="text-lg leading-relaxed mb-10 opacity-70">
+                        Premier global business consultancy specializing in corporate growth, strategic planning, and
+                        legal compliance.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Resources</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="about.html" class="hover:text-brand transition-colors">Company Story</a></li>
+                        <li><a href="services.html" class="hover:text-brand transition-colors">Our Services</a></li>
+                        <li><a href="blog.html" class="hover:text-brand transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brand transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Services</h4>
+                    <ul class="space-y-5 text-lg">
+                        <li><a href="service-details.html" class="hover:text-brand transition-colors">Business Setup</a>
+                        </li>
+                        <li><a href="#" class="hover:text-brand transition-colors">PRO Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">IP Services</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Legal Advisory</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-xl mb-10">Global Office</h4>
+                    <ul class="space-y-8 text-lg">
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-map-pin text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">Business Center, King Abdullah Road Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-phone-volume text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70">+966 53 890 4337</span>
+                        </li>
+                        <li class="flex gap-5">
+                            <i class="fa-solid fa-envelope-open text-brand text-2xl mt-1"></i>
+                            <span class="opacity-70 underline underline-offset-4">info@setupingcc.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-5 opacity-40 text-sm">
+                <p class="text-center md:text-start">&copy; 2026 SetupInGCC International. All rights reserved.</p>
+                <div class="flex gap-12">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Charter</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Operations</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop"
+        class="cursor-pointer fixed bottom-8 right-8 w-14 h-14 bg-brand text-white rounded-2xl shadow-2xl shadow-brand/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-brand-dark hover:scale-110 active:scale-95 z-50">
+        <i class="fa-solid fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
     <script src="./js/main.js"></script>
 </body>
 
